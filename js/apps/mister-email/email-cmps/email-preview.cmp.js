@@ -1,13 +1,13 @@
 export default {
   props: ["email"],
-  template: `  
+  template: ` 
          <li class="email-preview clean-list " @click="goToDetails">
             <p :class=""> {{email}}
                 <span v-if="isRead" @click="mark" class="mark-email"><i class="fas fa-check-square"></i></span>
                 <span v-else @click="mark" class="unmark-email"><i class="far fa-square"></i></span>
-                <router-view />
             </p>
          </li>
+
           `,
   data() {
     return {

@@ -1,5 +1,8 @@
 import emailDetails from "./email-pages/email-details.cpm.js";
-// ישנה בעיה עם פתיחה ברואת חדש כי הוא מתרנדר עם האפליקציה עצמה
+// import emailList from './email-cmps/email-list.cmp.js';
+
+
+
 const myRoutes = [
   {
     path: "/email/:emailId",

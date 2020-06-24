@@ -53,6 +53,7 @@ function deleteEmail(emailId) {
 function getEmailById(emailId) {
     var emails = Utils.loadFromStorage('emails');
     const email = emails.find((email) => email.id === emailId);
+    console.log(email)
     return Promise.resolve(email);
 }
 

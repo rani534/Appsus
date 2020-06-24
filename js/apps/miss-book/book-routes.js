@@ -1,5 +1,5 @@
 // import homePage from './pages/home-page.cmp.js';
-import bookApp from './book-cmps/book-app.cmp.js';
+// import bookApp from './book-cmps/book-app.cmp.js';
 import bookDetails from './book-cmps/book-details.cmp.js';
 import homePage from './book-cmps/home-page.cmp.js';
 import about from './book-cmps/about.cmp.js';

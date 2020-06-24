@@ -11,6 +11,7 @@ export default {
   router: myRouter,
   template: `
         <main class="app-main book-app">
+            <router-view />
             <book-add @restartBookList="restart"></book-add> 
             <book-filter @filtered="setFilter"></book-filter>
             <book-list  v-bind:books="booksToShow" @selected="selectBook" ></book-list>

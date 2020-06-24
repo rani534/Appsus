@@ -1,8 +1,11 @@
+
+
+
 export default{
   props: ["book"],
   template: `
         <li class="book-preview align-center justify-center" v-bind:currency="getCurrency">
-        <img src="book.thumbnail">
+        <img :src="book.thumbnail"/>
            <h3> {{getTitle}} </h3>
            <h4 :class="getColor"> {{getCurrency}} {{getPrice}}</h4> 
            <router-link :to="'/book/' + book.id">Details</router-link>            

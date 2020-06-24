@@ -7,11 +7,6 @@ import bookAdd from './book-cmps/book-add.cmp.js'
 
 
 const myRoutes = [
-    
-    {
-        path: '/book',
-        component: bookApp
-    },
     {
         path: '/book/:bookId',
         component: bookDetails
@@ -28,7 +23,6 @@ const myRoutes = [
         path: '/add',
         component: bookAdd
     },
-   
 ];
 
 export const myRouter = new VueRouter({ routes: myRoutes })

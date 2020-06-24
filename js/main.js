@@ -1,5 +1,5 @@
 import { myRouter } from "./routes.js";
-import appHeader from "./app-header.cmp.js";
+import appHeader from './cmps/app-header.cmp.js';
 
 new Vue({
     el: "#app",
@@ -10,7 +10,6 @@ new Vue({
         <main>
             <router-view />
         </main>
-
     </div>
     `,
     components: {

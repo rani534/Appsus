@@ -419,13 +419,9 @@ function removeReview(bookId, idx) {
 }
 
 
-function getGoogleBooksByAxios(){
-  return axios
-  .get(
-    'https://www.googleapis.com/books/v1/volumes?printType=books&q=effective%20javascript'
-  )
-    .then
-      ((books) => books.data.items);
+function getGoogleBooksByAxios(name){
+  return axios.get(`https://www.googleapis.com/books/v1/volumes?printType=books&q=${name}`)
+    .then((books) => books.data.items)
 }
 
 function addGoogleBook(googleBook){

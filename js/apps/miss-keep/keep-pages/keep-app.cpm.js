@@ -16,7 +16,7 @@ import inputNoteVideo from '../keep-cmps/input-note-video.cmp.js';
 export default {
     // router: myRouter,
   template: ` 
-    <section >
+    <section class="keep-app">
        <h1>Keep app</h1>
        <!-- render input -->
        <component :is="currInputComponent" ></component>

@@ -1,7 +1,9 @@
 export default {
   props: ["emails"],
   template: `
+    <sectio class="email-status">      
       <h3 v-if="emails">{{getNumOfReadEmails}}</h3>
+    </section>
       `,
 //   data(){
 //       return {

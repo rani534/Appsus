@@ -11,7 +11,7 @@ import   { eventBus } from '../book-services/event-bus.service.js'
 export default {
   router: myRouter,
   template: `
-        <main class="app-main book-app">
+        <main class="book-app app-main">
             <router-view />
             <book-add @restartBookList="restart"></book-add> 
             <book-filter @filtered="setFilter"></book-filter>

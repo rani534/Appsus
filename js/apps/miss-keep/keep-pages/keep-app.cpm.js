@@ -1,7 +1,7 @@
-// import { myRouter } from "../keep-routes.js";
-import  { notService }  from '../keep-services/keep-service.js';
 
-import noteList from '../keep-cmps/keep-list.cmp.js';
+import  { noteService }  from '../keep-services/keep-service.js';
+
+import noteList from '../keep-cmps/note-list.cmp.js';
 
 //  to tender input
 import inputNoteTxt from '../keep-cmps/input-note-txt.cmp.js';
@@ -14,7 +14,6 @@ import inputNoteVideo from '../keep-cmps/input-note-video.cmp.js';
 
 
 export default {
-    // router: myRouter,
   template: ` 
     <section class="keep-app">
        <h1>Keep app</h1>
@@ -25,26 +24,26 @@ export default {
        <button @click="changeInputComponent('input-note-todos')">todos</button>
        <button @click="changeInputComponent('input-note-video')">video</button>
 
-       <note-list v-if="notes"></note-list>
+       <note-list v-if="notes" :notes="notes" ></note-list>
     </section>
     `,
   data() {
     return {
-      currInputComponent:  notService.getInput()[0],
+      currInputComponent:  noteService.getInput()[0],
       notes: null
     };
   },
   computed: {},
   methods: {
     changeInputComponent(type){
-     let idx = notService.getInput().findIndex(note => {
+     let idx = noteService.getInput().findIndex(note => {
         return note === type
       })
-      this.currInputComponent =  notService.getInput()[idx]
+      this.currInputComponent =  noteService.getInput()[idx]
     }
   },
   created(){
-      this.notes = 
+      this.notes = noteService.getNotes()
   },
   components: {
     inputNoteTxt,

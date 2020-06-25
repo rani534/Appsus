@@ -1,5 +1,5 @@
 export const notService = {
-  getNotes,
+  getNotes
 };
 function getNotes() {
   return notes;

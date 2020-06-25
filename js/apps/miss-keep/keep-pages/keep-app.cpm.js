@@ -10,21 +10,26 @@ import noteVideo from '../keep-cmps/note-video.cmp.js';
 export default {
     // router: myRouter,
   template: ` 
-    <section v-if="objs">
+    <section v-if="currComponent">
        <h1>Keep app</h1>
-       <component  v-for="obj in objs"  :is="obj.type" ></component>
+       <component  :is="currComponent.type" ></component>
+       <button>txt</button>
+       <button>img</button>
+       <button>todos</button>
+       <button>video</button>
     </section>
     `,
   data() {
     return {
-      objs: null
+      currComponent: this.currComponent = notService.getNotes()[0]
     };
   },
   computed: {},
   methods: {},
-  created() {
-  this.objs = notService.getNotes()
-  },
+  // created(){
+  //   console.log(notService.getNotes)
+  //   this.currComponent = notService.getNotes[0]
+  // },
   components: {
     noteTxt,
     noteImg,

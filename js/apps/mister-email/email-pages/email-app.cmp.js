@@ -12,7 +12,7 @@ export default {
        <h1>EMAIL app</h1>
        <email-header ></email-header>
        <email-status :emails="emails"> </email-status>
-       <email-list  :emails="emailToShow" ></email-list>
+       <email-list v-if="!email" :emails="emailToShow" ></email-list>
          
        <main>
            <router-view/> 
@@ -22,7 +22,9 @@ export default {
   data() {
     return {
       emails: null,
-      search: null
+      search: null,
+      email: null
+      
     };
   },
   computed: {

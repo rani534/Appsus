@@ -6,7 +6,8 @@ import bookAdd from './book-add.cmp.js'
 import { bookService } from "../book-services/book.service.js";
 import { myRouter } from "../book-routes.js";
 
-
+import   { eventBus } from '../book-services/event-bus.service.js'
+ 
 export default {
   router: myRouter,
   template: `
@@ -14,7 +15,7 @@ export default {
             <router-view />
             <book-add @restartBookList="restart"></book-add> 
             <book-filter @filtered="setFilter"></book-filter>
-            <book-list  v-bind:books="booksToShow" @selected="selectBook" ></book-list>
+            <book-list v-if="!selectedBook" v-bind:books="booksToShow" ></book-list>
         </main>
     `,
   data() {
@@ -46,9 +47,9 @@ export default {
     setFilter(filterBy) {
       this.filterBy = filterBy;
     },
-    selectBook(book) {
-      this.selectedBook = book;
-    },
+    // selectBook(book) {
+    //   this.selectedBook = book;
+    // },
     restart(){
       bookService.query()
       .then(books => this.books = books);
@@ -58,7 +59,10 @@ export default {
     bookService.query()
       .then(books => {
         this.books = books;
-      })
+      });
+      eventBus.$on('selected' , () => {
+        this.selectedBook = !this.selectedBook
+    }); 
   },
   components:{
     bookList,

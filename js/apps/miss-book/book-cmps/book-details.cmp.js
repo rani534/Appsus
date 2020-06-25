@@ -1,6 +1,8 @@
 import { bookService } from "../book-services/book.service.js";
-import bookReview from './book-review.cmp.js'
-export default{
+import bookReview from "./book-review.cmp.js";
+import { eventBus } from "../book-services/event-bus.service.js";
+
+export default {
   template: `
         <section class="book-details" v-if="book">
         <div>
@@ -35,7 +37,7 @@ export default{
     `,
   data() {
     return {
-      book:null,
+      book: null,
     };
   },
   computed: {
@@ -70,30 +72,32 @@ export default{
           return "₪";
       }
     },
-    price(){
+    price() {
       return this.book.listPrice.amount;
     },
-    isOnSale(){
+    isOnSale() {
       return this.book.listPrice.isOnSale;
     },
-    authors(){
+    authors() {
       return this.book.authors.length > 1;
-    }
+    },
   },
   methods: {
     close() {
-      this.$router.push('/book')
-  }
+      eventBus.$emit('selected')
+      this.$router.push("/book"); 
+    },
   },
-  components:{
-    bookReview
+  components: {
+    bookReview,
   },
-  created(){
-    const {bookId} = this.$route.params;
-        bookService.getBookById(bookId)
-            .then(book => {
-                this.book = book;
-            })
-  }
-}
-
+  created() {
+    const { bookId } = this.$route.params;
+    bookService.getBookById(bookId).then((book) => {
+      this.book = book;
+    });
+  },
+  mounted() {
+    eventBus.$emit("selected");
+  },
+};

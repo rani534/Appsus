@@ -1,9 +1,11 @@
 import { emailService } from "../email-services/email-service.js";
+import { eventBus } from '../email-services/event-bus.service.js';
 
 export default {
   template: `
     <section v-if="email">
-         <p>{{email}}</p>
+    <button @click="close">X</button>
+         <p>{{email.body}}</p>
     </section>
     `,
   data() {
@@ -18,5 +20,11 @@ export default {
 
          this.email = email
       })
-  }
+  },
+  methods:{
+    close() {
+      eventBus.$emit('selected')
+        this.$router.push("/email");
+    }
+  },
 };

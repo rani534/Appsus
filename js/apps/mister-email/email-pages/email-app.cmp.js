@@ -1,5 +1,6 @@
-import { myRouter } from "../email-routes.js";
 import { emailService } from "../email-services/email-service.js";
+import { myRouter } from "../email-routes.js";
+import { eventBus} from '../email-services/event-bus.service.js';
 
 import emailList from "../email-cmps/email-list.cmp.js";
 import emailHeader from '../email-cmps/email-header.cmp.js'
@@ -12,7 +13,7 @@ export default {
        <h1>EMAIL app</h1>
        <email-header ></email-header>
        <email-status :emails="emails"> </email-status>
-       <email-list v-if="!email" :emails="emailToShow" ></email-list>
+       <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list>
          
        <main>
            <router-view/> 
@@ -23,7 +24,8 @@ export default {
     return {
       emails: null,
       search: null,
-      email: null
+      selectedEmail: null,
+
       
     };
   },
@@ -33,14 +35,18 @@ export default {
     },
   },
   methods: {},
-  created() {
-    emailService.query().then((emails) => (this.emails = emails));
-  },
+
   components: {
     emailList,
     emailHeader,
     emailStatus
   },
+  created(){
+    emailService.query().then((emails) => (this.emails = emails));
+    eventBus.$on('selected' , () => {    
+      this.selectedEmail = !this.selectedEmail
+    }); 
+  }
 };
 
 

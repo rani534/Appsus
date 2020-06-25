@@ -1,6 +1,5 @@
 
-import { emailService } from '../email-services/email-service.js';
-
+import { eventBus } from '../email-services/event-bus.service.js';
 export default {
   props: ["email"],
   template: ` 
@@ -24,6 +23,7 @@ export default {
 
     },
     goToDetails(){
+        eventBus.$emit("selected");
         this.$router.push('/email/'+ this.email.id)
     }
   },

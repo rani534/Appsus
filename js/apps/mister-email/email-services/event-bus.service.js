@@ -1,13 +1,8 @@
+// export const EVENT_SELECT_EMAIL = 'selected'
 
-// export const EVENT_SELECT_BOOK = 'selected'
 
 
 const bus = new Vue();
-
-
-
-
-
 
 
 

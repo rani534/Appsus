@@ -2,7 +2,7 @@ import { eventBus } from '../email-services/event-bus.service.js';
 
 export default {
     template:`
-    <section>
+    <section class="email-filter">
         <select @change="filter">
             <option  value="all">All</option>
             <option  value="read">Read</option>

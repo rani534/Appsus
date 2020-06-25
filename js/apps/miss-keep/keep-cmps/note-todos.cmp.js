@@ -1,6 +1,6 @@
 export default {
   template: `
-   <section>
+   <section class="note-totdos">
      <input type="text" placeholder="Enter comma separated list...">
    </section>
     `,

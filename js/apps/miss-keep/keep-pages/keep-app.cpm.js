@@ -12,7 +12,7 @@ import noteVideo from '../keep-cmps/note-video.cmp.js';
 export default {
     // router: myRouter,
   template: ` 
-    <section >
+    <section class="keep-app">
        <h1>Keep app</h1>
        <component :is="currComponent" ></component>
        <button @click="currInputComponent('note-txt')">txt</button>

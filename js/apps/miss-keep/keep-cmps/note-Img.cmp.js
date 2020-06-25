@@ -1,6 +1,6 @@
 export default {
     template: `
-    <section>
+    <section class="note-img">
        <input type="text" placeholder="Enter img URL...">
    </section>
     `

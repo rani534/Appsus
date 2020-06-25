@@ -21,8 +21,6 @@ export default {
   methods: {
     mark() {
       this.isRead = !this.isRead;
-      emailService.getEmailById(emailId)
-         .then(email => email.isRead = this.isRead)
 
     },
     goToDetails(){

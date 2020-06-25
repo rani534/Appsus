@@ -1,7 +1,7 @@
 export default {
-  template: `
+    template: `
    <section>
-     <input type="text" placeholder="Enter comma separated list...">
+     <h1>todos</h1>
    </section>
-    `,
-};
+    `
+}

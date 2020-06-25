@@ -1,14 +1,18 @@
+import { Utils } from '../../../services/utils-service.js';
+
+
 export const notService = {
   getNotes,
-  getComponent
+  getInput
 };
 function getNotes() {
   return notes;
 }
 
-function getComponent(){
-  return ['note-txt', 'note-img' , 'note-todos' ,'note-video']
+function getInput(){
+  return ['input-note-txt', 'input-note-img' , 'input-note-todos' ,'input-note-video']
 }
+
 
 var notes = [
   {
@@ -48,4 +52,4 @@ var notes = [
       ],
     },
   }
-];
+].map(keep => keep.id = Utils.getRandomId)

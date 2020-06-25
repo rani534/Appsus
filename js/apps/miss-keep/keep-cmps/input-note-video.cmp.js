@@ -1,7 +1,7 @@
 export default {
     template: `
    <section>
-     <h1>video</h1>
+        <input type="text" placeholder="Enter video URL..">
    </section>
     `
 }

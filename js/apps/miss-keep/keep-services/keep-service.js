@@ -9,6 +9,7 @@ export const noteService = {
   addTxtNote,
   setLastRequest,
   getLastRequest,
+  deleteNote,
 };
 
 function getNotes() {
@@ -70,6 +71,7 @@ var gNotes = [
 
 function addTxtNote(val) {
   var txt = {
+    id: Utils.getRandomId(),
     type: "note-txt",
     isPinned: false,
     info: {
@@ -82,6 +84,7 @@ function addTxtNote(val) {
 
 function addImgNote(val) {
   const img = {
+    id: Utils.getRandomId(),
     type: "note-img",
     info: {
       url: val,
@@ -97,6 +100,7 @@ function addImgNote(val) {
 
 function addTodosNote(val) {
   const todos = {
+    id: Utils.getRandomId(),
     type: "note-todos",
     info: {
       label: "How was it:",
@@ -112,6 +116,7 @@ function addTodosNote(val) {
 
 function addVideoNote(val) {
   const video = {
+    id: Utils.getRandomId(),
     type: "note-video",
     info: {
       url: val,
@@ -128,4 +133,11 @@ function setLastRequest(txt) {
 }
 function getLastRequest() {
   return gLastRequest;
+}
+
+function deleteNote(noteId) {
+  const idx = gNotes.findIndex((note) => note.id === noteId);
+  console.log(idx)
+  gNotes.splice(idx, 1);
+  Utils.storeToStorage("notes", gNotes);
 }

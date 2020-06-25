@@ -3,6 +3,7 @@ import noteImg from "./note-Img.cmp.js";
 import noteTodos from "./note-todos.cmp.js";
 import noteVideo from "./note-video.cmp.js";
 
+import noteEdit from './note-edit.cmp.js';
 
 
 
@@ -10,7 +11,8 @@ export default {
   props: ["note"],
   template: `
           <li v-if="currComponent" class="note-preview">
-            <component :is="currComponent" ></component>       
+            <component :is="currComponent" ></component> 
+            <note-edit :note="note"></note-edit>
           </li>
       `,
   data() {
@@ -26,5 +28,6 @@ export default {
     noteImg,
     noteTodos,
     noteVideo,
+    noteEdit
   },
 };

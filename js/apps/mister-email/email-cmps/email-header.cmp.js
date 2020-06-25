@@ -1,5 +1,4 @@
 import emailFilter from '../email-cmps/email-filter.cmp.js'
-import emailSearch from '../email-cmps/email-search.cmp.js'
 
 
 
@@ -14,6 +13,6 @@ export default {
     `,
     components:{
         emailFilter,
-        emailSearch
+        
     }
 }

@@ -45,6 +45,12 @@ export default {
         })
         return emails
       }
+      else{
+        const filteredemails = this.emails.filter((email) => {
+          return email.subject.toLowerCase().includes(this.filterBy.toLowerCase());
+        })
+          return filteredemails
+    }
 
     },
   },

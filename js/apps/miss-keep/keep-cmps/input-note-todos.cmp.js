@@ -1,26 +1,29 @@
 import { noteService } from "../keep-services/keep-service.js";
 
-
 export default {
   template: `
    <section>
-     <input  v-model="txt" @keyup.enter="addTodosNote" type="text" placeholder="Enter comma separated list..."/>
+      <input ref="input" @input="setLastRequest" v-model="txt" @keyup.enter="addTodosNote" type="text" placeholder="Enter todos..." />
    </section>
     `,
-    data(){
-      return {
-        txt: ''
-      }
+  data() {
+    return {
+      txt: "",
+    };
+  },
+  methods: {
+    addTodosNote() {
+      noteService.addTodosNote(this.txt);
+      this.txt = "";
     },
-  // methods: {
-  //   addTodosNote() {
-  //     noteService.addTodosNote(this.txt);
-  //     this.txt = '';
-  //   },
-  // },
-  // created(){
-  //   this.input = '';
-  // }
+    setLastRequest() {
+      noteService.setLastRequest(this.txt);
+    },
+  },
+  created() {
+    this.txt = noteService.getLastRequest();
+  },
+  mounted() {
+    this.$refs.input.focus();
+  },
 };
-
-

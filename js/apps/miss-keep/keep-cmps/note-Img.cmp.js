@@ -1,5 +1,7 @@
 export default {
     template: `
-    <h1>img</h1>
+    <section>
+       <input type="text" placeholder="Enter img URL...">
+   </section>
     `
 }

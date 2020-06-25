@@ -1,8 +1,13 @@
 export const notService = {
-  getNotes
+  getNotes,
+  getComponent
 };
 function getNotes() {
   return notes;
+}
+
+function getComponent(){
+  return ['note-txt', 'note-img' , 'note-todos' ,'note-video']
 }
 
 var notes = [
@@ -32,6 +37,8 @@ var notes = [
         { txt: "Do this", doneAt: 187111111 },
       ],
     },
+  },
+  {
     type: "note-video",
     info: {
       placeholder: "How was it:",
@@ -40,5 +47,5 @@ var notes = [
         { txt: "Do this", doneAt: 187111111 },
       ],
     },
-  },
+  }
 ];

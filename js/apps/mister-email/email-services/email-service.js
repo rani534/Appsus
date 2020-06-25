@@ -2,7 +2,8 @@ export const emailService = {
   query,
   addEmail,
   deleteEmail,
-  getEmailById
+  getEmailById,
+  toggleIsRead
 };
 
 import { Utils } from "../../../services/utils-service.js";
@@ -53,8 +54,17 @@ function deleteEmail(emailId) {
 function getEmailById(emailId) {
     var emails = Utils.loadFromStorage('emails');
     const email = emails.find((email) => email.id === emailId);
-    console.log(email)
-    return Promise.resolve(email);
+    return Promise.resolve(email)
 }
 
-
+function toggleIsRead(emailId){
+  var emails = Utils.loadFromStorage('emails');
+  const idx = emails.findIndex(email =>{
+       return email.id === emailId
+       })
+       emails[idx].isRead = !emails[idx].isRead
+       gEmails = emails;
+       Utils.storeToStorage("emails", gEmails);
+         
+       return Promise.resolve(gEmails)
+}

@@ -1,5 +1,7 @@
 export default {
     template: `
-    <h1>htfttfo</h1>
+   <section>
+   <input type="text" placeholder="Enter text...">
+   </section>
     `
 }

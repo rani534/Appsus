@@ -12,7 +12,7 @@ export default {
     <section class="email-app">
        <h1>EMAIL app</h1>
        <email-header ></email-header>
-       <email-status :emails="emails"> </email-status>
+       <email-status :emails="emails"></email-status>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list>
          
        <main>
@@ -34,7 +34,14 @@ export default {
       return this.emails;
     },
   },
-  methods: {},
+  methods: {
+    toggleIsRead(emailId){
+      emailService.toggleIsRead(emailId)
+        .then(emails =>{
+          this.emails = emails
+        })
+    }
+  },
 
   components: {
     emailList,
@@ -45,6 +52,9 @@ export default {
     emailService.query().then((emails) => (this.emails = emails));
     eventBus.$on('selected' , () => {    
       this.selectedEmail = !this.selectedEmail
+    }); 
+    eventBus.$on('toggleRead' , (emailId) => {    
+      this.toggleIsRead(emailId)
     }); 
   }
 };

@@ -9,18 +9,16 @@ export default {
                 <span v-else @click.stop="mark" class="unmark-email"><i class="far fa-square"></i></span>
             </p>
          </li>
-
           `,
   data() {
     return {
       isRead: this.email.isRead,
-      
     };
   },
   methods: {
     mark() {
-      this.isRead = !this.isRead;
-
+      this.isRead = !this.isRead
+      eventBus.$emit('toggleRead' , this.email.id)
     },
     goToDetails(){
         eventBus.$emit("selected");

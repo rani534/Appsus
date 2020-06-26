@@ -5,7 +5,12 @@ export default {
   template: `
    <section class="note-txt column-layout" >
         <p>{{txt}}</p>
+        
+        <div class="logo logo-txt">
+          <i class="fas fa-font"></i>
+        </div>
         <textarea ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt"></textarea>
+        
     </section>
     `,
   data() {

@@ -139,7 +139,6 @@ function addTodosNote(todo) {
       label: "How was it:",
       todos: [
         { txt: todo, doneAt: null },
-        { txt: todo, doneAt: 187111111 },
       ],
     },
     style: {

@@ -4,7 +4,10 @@ export default {
   props: ["note"],
   template: `
    <section class="note-img column-layout" >
-       <img :src="url" />
+   <img :src="url" />
+        <div class="logo logo-img">
+            <i class="far fa-image"></i>
+        </div>
         <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"></textarea>
     </section>
     `,

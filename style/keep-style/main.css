@@ -32,3 +32,26 @@
 .marked{
 text-decoration: line-through;
 }
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.note-edit button{
+    outline: none;
+    background-color: #fff;
+    border: 0;
+}
+
+.note-edit{
+    width: 59%;
+    align-self: flex-end;
+}
+
+.note-todos ul{
+    width: 100%;
+}

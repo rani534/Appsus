@@ -6,11 +6,15 @@ export default {
   template: `
    <section class="note-todos column-layout" >
        <ul>
-           <li :class="{marked : todos[idx].doneAt }" @click="mark(idx)" v-for="(todo,idx) in todos">
-           {{todo.txt}}
+       
+           <li :class="{marked : todos[idx].doneAt }" class="flex space-between" @click="mark(idx)" v-for="(todo,idx) in todos">
+            {{todo.txt}} 
             <button @click="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
            </li>
         </ul>
+        <div class="logo logo-todos">
+          <i class="fas fa-list-ul"></i>
+        </div>
         <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo"></textarea>
     </section>
     `,

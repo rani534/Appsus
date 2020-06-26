@@ -15,7 +15,8 @@ export default {
         <div class="logo logo-todos">
           <i class="fas fa-list-ul"></i>
         </div>
-        <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo"></textarea>
+        <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo" placeholder="Add note..."></textarea>
+        </ul>
     </section>
     `,
   data() {
@@ -43,3 +44,4 @@ export default {
     },
   },
 };
+

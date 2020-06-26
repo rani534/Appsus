@@ -8,8 +8,7 @@ export default {
         <div class="logo logo-video">
             <i class="fab fa-youtube"></i>
         </div>
-        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"></textarea>
-        
+        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"  placeholder="Enter Video URL..."></textarea>
     </section>
     `,
     data() {

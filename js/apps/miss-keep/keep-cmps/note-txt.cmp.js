@@ -8,9 +8,8 @@ export default {
         
         <div class="logo logo-txt">
           <i class="fas fa-font"></i>
-        </div>
-        <textarea ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt"></textarea>
-        
+        </div>        
+        <textarea  ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt" placeholder="Enter text..."></textarea>
     </section>
     `,
   data() {

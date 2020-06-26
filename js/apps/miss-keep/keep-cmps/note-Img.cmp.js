@@ -8,7 +8,7 @@ export default {
         <div class="logo logo-img">
             <i class="far fa-image"></i>
         </div>
-        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"></textarea>
+        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl" placeholder="Enter Img URL..."></textarea>
     </section>
     `,
   data() {

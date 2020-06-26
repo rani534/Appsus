@@ -1,7 +1,11 @@
-.note-edit button{
+.note-edit .btn{
     outline: none;
     background-color: #fff;
     border: 0;
+}
+
+.note-edit .btn:hover{
+    cursor: pointer;
 }
 
 .note-edit{

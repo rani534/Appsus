@@ -12,24 +12,24 @@ import inputNoteVideo from "../keep-cmps/input-note-video.cmp.js";
 
 export default {
   template: ` 
-    <section class="keep-app">
+    <section class="keep-app ">
        <h1>Keep app</h1>
      
 
       <div class="add-notes flex ">
            <component :is="currInputComponent" ></component>
-        <div class="btn-add-notes ">
-            <button class="add-txt-btn" @click="changeInputComponent('input-note-txt')">
+        <div class="btn-add-notes-container ">
+            <button title="add text" class="btn add-btn add-txt-btn" @click="changeInputComponent('input-note-txt')">
              <i class="fas fa-font"></i>
             </button>
-            <button class="add-img-btn" @click="changeInputComponent('input-note-img')">
+            <button title="add image" class="btn add-btn add-img-btn" @click="changeInputComponent('input-note-img')">
               <i class="far fa-image"></i>
             </button>
-            <button class="add-todos-btn" @click="changeInputComponent('input-note-todos')">
+            <button title="add todo" class="btn add-btn add-todos-btn" @click="changeInputComponent('input-note-todos')">
              <i class="fas fa-list-ul"></i>
             </button>
-            <button class="add-video-btn" @click="changeInputComponent('input-note-video')">
-             <i class="fab fa-youtube">
+            <button title="add video" class="btn add-btn add-video-btn" @click="changeInputComponent('input-note-video')">
+             <i class="fab fa-youtube"></i>
             </button>
         </div>     
       </div>     

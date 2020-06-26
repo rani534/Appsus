@@ -33,13 +33,14 @@ function getInput() {
 var gNotes = [
   {
     type: "note-txt",
-    isPinned: true,
+    isPinned: false,
     info: {
       txt: "Fullstack Me Baby!",
     },
   },
   {
     type: "note-img",
+    isPinned: true,
     info: {
       url: "http://some-img/me",
       title: "Me playing Mi",
@@ -50,6 +51,7 @@ var gNotes = [
   },
   {
     type: "note-todos",
+    isPinned: true,
     info: {
       placeholder: "How was it:",
       todos: [
@@ -60,6 +62,7 @@ var gNotes = [
   },
   {
     type: "note-video",
+    isPinned: false,
     info: {
       url: "http://some-img/me",
     },
@@ -72,6 +75,7 @@ var gNotes = [
 function addTxtNote(val) {
   var txt = {
     id: Utils.getRandomId(),
+    isPinned: true,
     type: "note-txt",
     isPinned: false,
     info: {
@@ -85,6 +89,7 @@ function addTxtNote(val) {
 function addImgNote(val) {
   const img = {
     id: Utils.getRandomId(),
+    isPinned: false,
     type: "note-img",
     info: {
       url: val,
@@ -101,6 +106,7 @@ function addImgNote(val) {
 function addTodosNote(val) {
   const todos = {
     id: Utils.getRandomId(),
+    isPinned: false,
     type: "note-todos",
     info: {
       label: "How was it:",
@@ -117,6 +123,7 @@ function addTodosNote(val) {
 function addVideoNote(val) {
   const video = {
     id: Utils.getRandomId(),
+    isPinned: false,
     type: "note-video",
     info: {
       url: val,

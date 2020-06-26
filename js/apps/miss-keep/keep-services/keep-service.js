@@ -10,6 +10,7 @@ export const noteService = {
   setLastRequest,
   getLastRequest,
   deleteNote,
+  toggleEditNote,
 };
 
 function getNotes() {
@@ -34,6 +35,7 @@ var gNotes = [
   {
     type: "note-txt",
     isPinned: false,
+    isOnEdit: false,
     info: {
       txt: "Fullstack Me Baby!",
     },
@@ -44,8 +46,9 @@ var gNotes = [
   {
     type: "note-img",
     isPinned: true,
+    isOnEdit: false,
     info: {
-      url: "http://some-img/me",
+      url: "https://www.youtube.com/embed/tgbNymZ7vqY",
       title: "Me playing Mi",
     },
     style: {
@@ -55,6 +58,7 @@ var gNotes = [
   {
     type: "note-todos",
     isPinned: true,
+    isOnEdit: false,
     info: {
       placeholder: "How was it:",
       todos: [
@@ -69,8 +73,9 @@ var gNotes = [
   {
     type: "note-video",
     isPinned: false,
+    isOnEdit: false,
     info: {
-      url: "http://some-img/me",
+      url: "https://www.youtube.com/embed/tgbNymZ7vqY",
     },
     style: {
       backgroundColor: "#000",
@@ -87,6 +92,7 @@ function addTxtNote(val) {
     isPinned: true,
     type: "note-txt",
     isPinned: false,
+    isOnEdit: false,
     info: {
       txt: val,
     },
@@ -102,6 +108,7 @@ function addImgNote(val) {
   const img = {
     id: Utils.getRandomId(),
     isPinned: false,
+    isOnEdit: false,
     type: "note-img",
     info: {
       url: val,
@@ -119,6 +126,7 @@ function addTodosNote(val) {
   const todos = {
     id: Utils.getRandomId(),
     isPinned: false,
+    isOnEdit: false,
     type: "note-todos",
     info: {
       label: "How was it:",
@@ -139,9 +147,10 @@ function addVideoNote(val) {
   const video = {
     id: Utils.getRandomId(),
     isPinned: false,
+    isOnEdit: false,
     type: "note-video",
     info: {
-      url: val,
+      url: `https://www.youtube.com/embed/${val}`,
     },
     style: {
       backgroundColor: "#000",
@@ -162,7 +171,11 @@ function getLastRequest() {
 
 function deleteNote(noteId) {
   const idx = gNotes.findIndex((note) => note.id === noteId);
-  console.log(idx)
   gNotes.splice(idx, 1);
   Utils.storeToStorage("notes", gNotes);
+}
+
+function toggleEditNote(noteId){
+  let note = gNotes.find((note) => note.id === noteId);
+    note.isOnEdit = !note.isOnEdit;  
 }

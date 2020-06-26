@@ -10,7 +10,7 @@ export default {
         <input ref="colorInput" v-model="backgroundColor" type="color" hidden/>
         <button class="note-bgc-btn">color</button>
         <button @click="deleteNote" class="delete-btn">delete</button>
-        <button class="edit-btn">edit</button>
+        <button class="edit-btn" @click="editNote">edit</button>
         <button class="copy-btn">copy</button>
     </section>
     `,
@@ -23,6 +23,9 @@ export default {
         deleteNote() {
             noteService.deleteNote(this.note.id)
         },
+        editNote(){
+            noteService.toggleEditNote(this.note.id)  
+        }
     },
     computed: {
         inputColor() {

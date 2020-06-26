@@ -1,19 +1,34 @@
-/* .note-preview{
+.note-preview{
     position: relative;
-    width: 400px;
-    height: 250px;
+    width: 300px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
 }
+.note-preview > *{
+    width: 100%;
+    padding: 4px;
+}
 
-.note-preview section{
+/* .note-preview section{
     position: absolute;
     bottom: 0;
     margin-bottom: 7px;
-}
+} */
 
-.video-note{
+/* .video-note{
 
 } */
+
+.note-img img{
+    width: 100%;
+}
+.note-img textarea{
+    width: 100%;
+    height: 38px;
+}
+
+.marked{
+text-decoration: line-through;
+}

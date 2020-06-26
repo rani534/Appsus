@@ -24,7 +24,7 @@ export default {
             noteService.deleteNote(this.note.id)
         },
         editNote(){
-            noteService.toggleEditNote(this.note.id)  
+            noteService.setEditMode(this.note.id)  
         }
     },
     computed: {

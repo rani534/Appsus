@@ -5,4 +5,8 @@
 @import './keep-style/main.css';
 @import './email-style/main.css';
 
+
+*{
+    box-sizing: border-box;
+}
 .app-header .router-link-exact-active {color: rgb(123, 197, 94)}

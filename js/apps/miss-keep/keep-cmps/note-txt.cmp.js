@@ -1,7 +1,23 @@
 export default {
-    template: `
-   <section class="note-txt">
-     <h1>txt</h1>
-   </section>
-    `
+  props:['note'],
+  template: `
+ <section class="note-txt">
+    
+ </section>
+  `
+  ,
+  data(){
+      return{
+
+      }
+  },
+  computed:{
+
+  },
+  methods:{
+
+  },
+  created(){
+      
+  }
 }

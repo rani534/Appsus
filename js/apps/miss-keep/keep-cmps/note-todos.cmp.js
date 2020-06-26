@@ -1,7 +1,23 @@
 export default {
+    props:['note'],
     template: `
    <section class="note-todos">
-      <h1>todos</h1>
+      
    </section>
     `
+    ,
+    data(){
+        return{
+
+        }
+    },
+    computed:{
+
+    },
+    methods:{
+
+    },
+    created(){
+        
+    }
 }

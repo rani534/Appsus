@@ -11,7 +11,7 @@ export default {
   props: ["note"],
   template: `
           <li v-if="currComponent" class="note-preview">
-            <component :is="currComponent" ></component> 
+            <component :note="note" :is="currComponent" ></component> 
             <note-edit :note="note"></note-edit>
           </li>
       `,

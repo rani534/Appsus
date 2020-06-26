@@ -1,7 +1,23 @@
 export default {
+    props:['note'],
     template: `
    <section class="note-img">
-      <h1>img</h1>
+      
    </section>
     `
+    ,
+    data(){
+        return{
+
+        }
+    },
+    computed:{
+
+    },
+    methods:{
+
+    },
+    created(){
+        
+    }
 }

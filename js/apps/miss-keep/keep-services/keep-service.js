@@ -37,6 +37,9 @@ var gNotes = [
     info: {
       txt: "Fullstack Me Baby!",
     },
+    style: {
+      backgroundColor: "#000",
+    },
   },
   {
     type: "note-img",
@@ -46,7 +49,7 @@ var gNotes = [
       title: "Me playing Mi",
     },
     style: {
-      backgroundColor: "#00d",
+      backgroundColor: "#000",
     },
   },
   {
@@ -59,12 +62,18 @@ var gNotes = [
         { txt: "Do this", doneAt: 187111111 },
       ],
     },
+    style: {
+      backgroundColor: "#000",
+    },
   },
   {
     type: "note-video",
     isPinned: false,
     info: {
       url: "http://some-img/me",
+    },
+    style: {
+      backgroundColor: "#000",
     },
   },
 ].map((keep) => {
@@ -81,6 +90,9 @@ function addTxtNote(val) {
     info: {
       txt: val,
     },
+    style: {
+      backgroundColor: "#000",
+    },
   };
   gNotes.push(txt);
   Utils.storeToStorage("notes", gNotes);
@@ -96,7 +108,7 @@ function addImgNote(val) {
       title: "Me playing Mi",
     },
     style: {
-      backgroundColor: "#00d",
+      backgroundColor: "#000",
     },
   };
   gNotes.push(img);
@@ -115,6 +127,9 @@ function addTodosNote(val) {
         { txt: val, doneAt: 187111111 },
       ],
     },
+    style: {
+      backgroundColor: "#000",
+    },
   };
   gNotes.push(todos);
   Utils.storeToStorage("notes", gNotes);
@@ -127,6 +142,9 @@ function addVideoNote(val) {
     type: "note-video",
     info: {
       url: val,
+    },
+    style: {
+      backgroundColor: "#000",
     },
   };
   gNotes.push(video);

@@ -5,7 +5,7 @@ export default {
   template: `
    <section class="note-video" >
         <iframe :src="url"></iframe>
-        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"></textarea>
+        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"  placeholder="Enter Video URL..."></textarea>
     </section>
     `,
   data() {

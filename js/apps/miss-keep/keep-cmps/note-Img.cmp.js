@@ -5,7 +5,7 @@ export default {
   template: `
    <section class="note-img column-layout" >
        <img :src="url" />
-        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl"></textarea>
+        <textarea ref="textarea" v-model="url" v-if="isOnEdit" @blur="setUrl" placeholder="Enter Img URL..."></textarea>
     </section>
     `,
   data() {

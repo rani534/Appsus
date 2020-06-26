@@ -5,7 +5,7 @@ export default {
   template: `
    <section class="note-txt column-layout" >
         <p>{{txt}}</p>
-        <textarea ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt"></textarea>
+        <textarea  ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt" placeholder="Enter text..."></textarea>
     </section>
     `,
   data() {

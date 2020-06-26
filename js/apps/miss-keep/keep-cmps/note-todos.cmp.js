@@ -8,10 +8,10 @@ export default {
        <ul>
            <li :class="{marked : todos[idx].doneAt }" @click="mark(idx)" v-for="(todo,idx) in todos">
            {{todo.txt}}
-            <button @click="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
+            <button @click.stop="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
            </li>
         </ul>
-        <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo"></textarea>
+        <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo" placeholder="Add note..."></textarea>
     </section>
     `,
   data() {
@@ -39,3 +39,4 @@ export default {
     },
   },
 };
+

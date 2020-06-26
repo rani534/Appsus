@@ -1,10 +1,10 @@
 @import './helpers.css';
 @import './book-style/main.css';
 @import './keep-style/main-keep.css';
-@import './email-style/main.css';
+@import './email-style/email-main.css';
 
 
 *{
-    box-sizing: border-box;
+ box-sizing: border-box;
 }
 .app-header .router-link-exact-active {color: rgb(123, 197, 94)}

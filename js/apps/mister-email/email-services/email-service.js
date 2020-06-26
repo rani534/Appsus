@@ -12,21 +12,21 @@ var gEmails = [
   {
     id: Utils.getRandomId(),
     subject: "Wassdap?",
-    body: `תיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתום`,
+    body: `תיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתום יאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתוםיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתוםיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתוםיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתום`,
     isRead: false,
-    sentAt: new Date(),
+    sentAt: 1593192175531,
   },
   {
     id: Utils.getRandomId(),
     subject: "Waap?",
-    body: `מוקד קטן ומשפחתימענה לסוכנים בלבד-ל!`,
+    body: `מוקד קטן ומשפחתימענה לסוכנים בלבד-ל יאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתום!`,
     isRead: true,
     sentAt: 1593010094350 ,
   },
   {
     id: Utils.getRandomId(),
     subject: "Wasap?",
-    body: `א ללקוחות!`,
+    body: `א ללקוחות!יאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתוםיאור התפקידלחבר שירות לסוכני ביטוח לתחום החיתום`,
     isRead: false,
     sentAt:  1592916142555 ,
   },
@@ -38,6 +38,7 @@ function query() {
   Utils.storeToStorage("emails", gEmails)
   return Promise.resolve(gEmails);
 }
+
 
 function addEmail(email) {
   gEmails.unshift(email);

@@ -29,7 +29,7 @@ export default {
              <i class="fas fa-list-ul"></i>
             </button>
             <button class="add-video-btn" @click="changeInputComponent('input-note-video')">
-             <i class="fab fa-youtube">
+             <i class="fab fa-youtube"></i>
             </button>
         </div>     
       </div>     

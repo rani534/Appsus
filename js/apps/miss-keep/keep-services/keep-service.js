@@ -18,7 +18,7 @@ export const noteService = {
   editTxt,
   editTodo,
   deleteTodo,
-  toggleMarkTodo
+  toggleMarkTodo,
 };
 
 function getNotes() {
@@ -56,7 +56,8 @@ var gNotes = [
     isPinned: true,
     isOnEdit: false,
     info: {
-      url: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Bulldog_02.jpg",
+      url:
+        "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Bulldog_02.jpg",
       title: "Me playing Mi",
     },
     style: {
@@ -137,9 +138,7 @@ function addTodosNote(todo) {
     type: "note-todos",
     info: {
       label: "How was it:",
-      todos: [
-        { txt: todo, doneAt: null },
-      ],
+      todos: [{ txt: todo, doneAt: null }],
     },
     style: {
       backgroundColor: "#000",
@@ -150,8 +149,8 @@ function addTodosNote(todo) {
 }
 
 function addVideoNote(url) {
-  const urls = url.split('=');
-  const urlId = urls[urls.length-1]
+  const urls = url.split("=");
+  const urlId = urls[urls.length - 1];
   const video = {
     id: Utils.getRandomId(),
     isPinned: false,
@@ -168,8 +167,6 @@ function addVideoNote(url) {
   Utils.storeToStorage("notes", gNotes);
 }
 
-
-
 function setLastRequest(txt) {
   gLastRequest = txt;
 }
@@ -183,54 +180,55 @@ function deleteNote(noteId) {
   Utils.storeToStorage("notes", gNotes);
 }
 
-
-
 // GENERAL:
-function setEditMode(noteId){
+function setEditMode(noteId) {
   let note = gNotes.find((note) => note.id === noteId);
-    note.isOnEdit = true  
+  note.isOnEdit = true;
 }
 
-function editVideo(noteId , url){
+function editVideo(noteId, url) {
   let note = gNotes.find((note) => note.id === noteId);
-  const urls = url.split('=');
-  const urlId = urls[urls.length-1]
+  const urls = url.split("=");
+  const urlId = urls[urls.length - 1];
   note.info.url = `https://www.youtube.com/embed/${urlId}`;
-  note.isOnEdit = false
+  note.isOnEdit = false;
   Utils.storeToStorage("notes", gNotes);
 }
-function editImg(noteId , url){
+function editImg(noteId, url) {
   let note = gNotes.find((note) => note.id === noteId);
   note.info.url = url;
-  note.isOnEdit = false
+  note.isOnEdit = false;
   Utils.storeToStorage("notes", gNotes);
 }
 
-function editTxt(noteId, txt){
+function editTxt(noteId, txt) {
   let note = gNotes.find((note) => note.id === noteId);
   note.info.txt = txt;
-  note.isOnEdit = false
+  note.isOnEdit = false;
   Utils.storeToStorage("notes", gNotes);
 }
 
-
-function editTodo(noteId, txt){
-  let note = gNotes.find((note) => note.id === noteId);
-  note.info.todos.push({ txt, doneAt: null });
-  note.isOnEdit = false
+function editTodo(noteId, txt) {
+  if (!txt) {
+    let note = gNotes.find((note) => note.id === noteId);
+    note.isOnEdit = false;
+  } else {
+    let note = gNotes.find((note) => note.id === noteId);
+    note.info.todos.push({ txt, doneAt: null });
+    note.isOnEdit = false;
+  }
   Utils.storeToStorage("notes", gNotes);
 }
 
-
-function deleteTodo(noteId, idx){
+function deleteTodo(noteId, idx) {
   let note = gNotes.find((note) => note.id === noteId);
   note.info.todos.splice(idx, 1);
   Utils.storeToStorage("notes", gNotes);
 }
 
-function toggleMarkTodo(noteId ,idx){
+function toggleMarkTodo(noteId, idx) {
   let note = gNotes.find((note) => note.id === noteId);
-  note.info.todos[idx].doneAt = (note.info.todos[idx].doneAt) ? null : Date.now();
+  note.info.todos[idx].doneAt = note.info.todos[idx].doneAt ? null : Date.now();
   console.log(note.info.todos[idx].doneAt);
   Utils.storeToStorage("notes", gNotes);
 }

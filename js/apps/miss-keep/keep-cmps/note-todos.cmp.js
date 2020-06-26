@@ -9,13 +9,13 @@ export default {
        
            <li :class="{marked : todos[idx].doneAt }" class="flex space-between" @click="mark(idx)" v-for="(todo,idx) in todos">
             {{todo.txt}} 
-            <button @click="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
+            <button @click.stop="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
            </li>
         </ul>
         <div class="logo logo-todos">
           <i class="fas fa-list-ul"></i>
         </div>
-        <textarea  v-model="currTodo" v-if="isOnEdit" @change="setTodo" placeholder="Add note..."></textarea>
+        <textarea  v-model="currTodo" v-if="isOnEdit" @blur="setTodo" placeholder="Add note..."></textarea>
         </ul>
     </section>
     `,
@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     setTodo() {
-        console.log(this.isOnEdit);
         noteService.editTodo(this.note.id, this.currTodo);
         this.currTodo = ''
     },

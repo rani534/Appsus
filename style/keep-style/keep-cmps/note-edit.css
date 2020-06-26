@@ -1,0 +1,10 @@
+.note-edit button{
+    outline: none;
+    background-color: #fff;
+    border: 0;
+}
+
+.note-edit{
+    width: 59%;
+    align-self: flex-end;
+}

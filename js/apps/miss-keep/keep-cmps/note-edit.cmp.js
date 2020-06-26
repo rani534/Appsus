@@ -17,7 +17,7 @@ export default {
             <i class="fas fa-trash-alt"></i>
         </button>
         <button class="edit-btn" @click="editNote">
-        <i class="fas fa-edit"></i>
+           <i class="fas fa-edit"></i>
         </button>
         <button class="copy-btn">
             <i class="fas fa-clone"></i> 

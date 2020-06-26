@@ -14,17 +14,25 @@ export default {
   template: ` 
     <section class="keep-app">
        <h1>Keep app</h1>
-       <!-- render input -->
+     
 
-      <!-- <keep-alive> -->
-         <component :is="currInputComponent" ></component>
-      <!-- </keep-alive> -->
-
-       <button @click="changeInputComponent('input-note-txt')">txt</button>
-       <button @click="changeInputComponent('input-note-img')">img</button>
-       <button @click="changeInputComponent('input-note-todos')">todos</button>
-       <button @click="changeInputComponent('input-note-video')">video</button>
-
+      <div class="add-notes flex ">
+           <component :is="currInputComponent" ></component>
+        <div class="btn-add-notes ">
+            <button class="add-txt-btn" @click="changeInputComponent('input-note-txt')">
+             <i class="fas fa-font"></i>
+            </button>
+            <button class="add-img-btn" @click="changeInputComponent('input-note-img')">
+              <i class="far fa-image"></i>
+            </button>
+            <button class="add-todos-btn" @click="changeInputComponent('input-note-todos')">
+             <i class="fas fa-list-ul"></i>
+            </button>
+            <button class="add-video-btn" @click="changeInputComponent('input-note-video')">
+             <i class="fab fa-youtube">
+            </button>
+        </div>     
+      </div>     
        <note-list v-if="notes" :notes="notes" ></note-list>
     </section>
     `,

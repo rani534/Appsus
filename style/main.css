@@ -1,8 +1,6 @@
-
 @import './helpers.css';
-
 @import './book-style/main.css';
-@import './keep-style/main.css';
+@import './keep-style/main-keep.css';
 @import './email-style/main.css';
 
 

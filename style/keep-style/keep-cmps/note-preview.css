@@ -1,0 +1,29 @@
+
+
+
+.note-preview {
+    position: relative;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.note-preview > *{
+    width: 100%;
+    padding: 4px;
+}
+
+.note-preview  textarea{
+    width: 100%;
+}
+
+
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 1.3rem;
+}

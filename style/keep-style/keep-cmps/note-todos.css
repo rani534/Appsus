@@ -1,0 +1,11 @@
+.note-todos ul {
+    width: 100%;
+}
+
+.note-todos li button {
+    margin-bottom: 6px;
+}
+
+.marked {
+    text-decoration: line-through;
+}

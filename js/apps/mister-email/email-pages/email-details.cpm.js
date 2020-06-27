@@ -23,7 +23,7 @@ export default {
   },
   methods:{
     close() {
-      eventBus.$emit('selected')
+      eventBus.$emit('exit')
         this.$router.push("/email");
     }
   },

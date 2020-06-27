@@ -16,7 +16,7 @@ export default {
        <email-filter></email-filter>
        <button @click="addEmail">+ Compose</button>
 
-       <add-email v-if="isAddingEmail"></add-email>
+       <add-email @sended="sended" v-if="isAddingEmail"></add-email>
 
        <email-status :emails="emails"></email-status>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
@@ -30,7 +30,7 @@ export default {
     return {
       emails: null,
       search: null,
-      selectedEmail: null,
+      selectedEmail: false,
       filterBy: 'all',
       isAddingEmail: false
 
@@ -44,19 +44,19 @@ export default {
           return email.isRead
         })
         return emails
-      } 
+      }
       if (this.filterBy === 'unRead') {
         const emails = this.emails.filter((email) => {
           return !email.isRead
         })
         return emails
       }
-      else{
+      else {
         const filteredemails = this.emails.filter((email) => {
           return email.subject.toLowerCase().includes(this.filterBy.toLowerCase());
         })
-          return filteredemails
-    }
+        return filteredemails
+      }
 
     },
   },
@@ -70,9 +70,19 @@ export default {
     setFilter(filterBy) {
       this.filterBy = filterBy;
     },
-    addEmail(){
+    addEmail() {
       this.selectedEmail = true
       this.isAddingEmail = true
+    },
+    sended() {
+      this.selectedEmail = false
+      this.isAddingEmail = false
+    },
+    unMarkEmail(emailId) {
+      emailService.unMarkEmail(emailId)
+        .then(emails => {
+          this.emails = emails
+        })
     }
   },
   components: {
@@ -83,7 +93,11 @@ export default {
   },
   created() {
     emailService.query().then((emails) => (this.emails = emails));
-    eventBus.$on('selected', () => {
+    eventBus.$on('selected', (emailId) => {
+      this.selectedEmail = !this.selectedEmail
+      this.unMarkEmail(emailId)
+    });
+    eventBus.$on('exit', () => {
       this.selectedEmail = !this.selectedEmail
     });
     eventBus.$on('toggleRead', (emailId) => {

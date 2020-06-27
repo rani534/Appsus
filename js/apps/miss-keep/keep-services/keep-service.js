@@ -65,14 +65,45 @@ var gNotes = [
       backgroundColor: "#fff",
     },
   },
+    {
+    type: "note-img",
+    isPinned: true,
+    isOnEdit: false,
+    info: {
+      url:
+        `https://i1.wp.com/metro.co.uk/wp-content/uploads/2019/08/PRI_76452395.jpg?quality=90&strip=all&zoom=1&resize=620%2C413&ssl=1`,
+      title: "Me playing Mi",
+    },
+    style: {
+      backgroundColor: "#fff",
+    },
+  },
   {
     type: "note-todos",
     isPinned: true,
     isOnEdit: false,
     info: {
       todos: [
-        { txt: "Do that", doneAt: null },
-        { txt: "Do this", doneAt: 187111111 },
+        { txt: "Pharmacy", doneAt: null },
+        { txt: "Resturante", doneAt: 187111111 },
+        { txt: "Swimming pool", doneAt: null },
+        { txt: "Flight", doneAt: 187111111 },
+      ],
+    },
+    style: {
+      backgroundColor: "#fff",
+    },
+  },
+  {
+    type: "note-todos",
+    isPinned: true,
+    isOnEdit: false,
+    info: {
+      todos: [
+        { txt: "Milk", doneAt: null },
+        { txt: "Tomatoes", doneAt: 187111111 },
+        { txt: "Eggs", doneAt: null },
+        { txt: "Soy milk", doneAt: 187111111 },
       ],
     },
     style: {

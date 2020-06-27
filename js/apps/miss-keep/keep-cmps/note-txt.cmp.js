@@ -4,8 +4,7 @@ export default {
   props: ["note"],
   template: `
    <section class="note-txt" >
-        <p>{{txt}}</p>
-        
+        <p>{{txt}}</p>  
         <div class="logo logo-txt">
           <i class="fas fa-font"></i>
         </div>        

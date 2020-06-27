@@ -9,3 +9,8 @@
 .marked {
     text-decoration: line-through;
 }
+
+.note-todos pre {
+    margin: 0;
+    font-size: 14px;
+}

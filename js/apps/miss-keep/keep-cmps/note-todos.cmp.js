@@ -5,12 +5,13 @@ export default {
   props: ["note"],
   template: `
    <section class="note-todos" >
-       <ul>
-       
+       <ul>   
            <li :class="{marked : todos[idx].doneAt }" class="flex space-between" @click="mark(idx)" v-for="(todo,idx) in todos">
-            {{todo.txt}} 
-            <button @click.stop="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
-           </li>
+             <div>
+                <pre>* {{todo.txt}}</pre> 
+            </div>
+                 <button @click.stop="deleteTodo(idx)" v-if="isOnEdit" class="delete-todo-btn" >x</button>
+          </li>
         </ul>
         <div class="logo logo-todos">
           <i class="fas fa-list-ul"></i>

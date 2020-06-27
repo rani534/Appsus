@@ -10,19 +10,20 @@ import noteEdit from './note-edit.cmp.js';
 export default {
   props: ["note"],
   template: `
-          <li v-if="currComponent" class="note-preview column-layout ">
+          <li :style="{'background-color': backgroundColor}" v-if="currComponent ,backgroundColor" class="note-preview column-layout ">
             <component :note="note" :is="currComponent"></component> 
             <note-edit :note="note"></note-edit>
-         </li>
-          
+         </li>  
       `,
   data() {
     return {
       currComponent: null,
+      backgroundColor: null
     };
   },
   created() {
     this.currComponent = this.note.type
+    this.backgroundColor = this.note.style.backgroundColor
   },
   components: {
     noteTxt,

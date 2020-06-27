@@ -19,6 +19,7 @@ export const noteService = {
   editTodo,
   deleteTodo,
   toggleMarkTodo,
+  setBgc
 };
 
 function getNotes() {
@@ -48,7 +49,7 @@ var gNotes = [
       txt: "Fullstack Me Baby!",
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   },
   {
@@ -61,7 +62,7 @@ var gNotes = [
       title: "Me playing Mi",
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   },
   {
@@ -75,7 +76,7 @@ var gNotes = [
       ],
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   },
   {
@@ -86,7 +87,7 @@ var gNotes = [
       url: "https://www.youtube.com/embed/UiH9Jt0-fOE",
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   },
 ].map((keep) => {
@@ -105,7 +106,7 @@ function addTxtNote(text) {
       txt: text,
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   };
   gNotes.unshift(txt);
@@ -123,7 +124,7 @@ function addImgNote(url) {
       title: "Me playing Mi",
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   };
   gNotes.unshift(img);
@@ -141,7 +142,7 @@ function addTodosNote(todo) {
       todos: [{ txt: todo, doneAt: null }],
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   };
   gNotes.unshift(todos);
@@ -160,7 +161,7 @@ function addVideoNote(url) {
       url: `https://www.youtube.com/embed/${urlId}`,
     },
     style: {
-      backgroundColor: "#000",
+      backgroundColor: "#fff",
     },
   };
   gNotes.unshift(video);
@@ -230,5 +231,10 @@ function toggleMarkTodo(noteId, idx) {
   let note = gNotes.find((note) => note.id === noteId);
   note.info.todos[idx].doneAt = note.info.todos[idx].doneAt ? null : Date.now();
   console.log(note.info.todos[idx].doneAt);
+  Utils.storeToStorage("notes", gNotes);
+}
+function setBgc(noteId ,color){
+  let note = gNotes.find((note) => note.id === noteId);
+  note.style.backgroundColor = color;
   Utils.storeToStorage("notes", gNotes);
 }

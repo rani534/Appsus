@@ -1,15 +1,19 @@
 import { noteService } from '../keep-services/keep-service.js';
 
 
+
+
 export default {
     props: ["note"],
     template: `
     <section class="note-edit" >
+
+
         
         <button  class="btn pin-btn" title="Pin note">
             <i class="fas fa-thumbtack"></i>
         </button>
-        <input ref="colorInput" v-model="backgroundColor" type="color" hidden/>
+        <input ref="colorInput" v-model="backgroundColor" @change="setBgc(note.id)" type="color" hidden/>
         <button @click="inputColor" class="btn note-bgc-btn "title="Background color">
             <i class="fas fa-palette palette"></i>
         </button>
@@ -26,7 +30,7 @@ export default {
     `,
     data() {
         return {
-            backgroundColor: ''
+            backgroundColor: this.note.style.backgroundColor
         }
     },
     methods: {
@@ -38,6 +42,9 @@ export default {
         },
         inputColor() {
             this.note.backgroundColor = this.$refs.colorInput.click()            
+        },
+        setBgc(noteId){
+            noteService.setBgc(noteId, this.backgroundColor)
         }
     },
 }

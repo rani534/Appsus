@@ -10,6 +10,10 @@ new Vue({
         <main>
             <router-view />
         </main>
+
+
+
+
     </div>
     `,
     components: {

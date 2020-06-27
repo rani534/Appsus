@@ -26,7 +26,15 @@
     display: inline-block;
     position: absolute;
     left: 5px;
-    bottom: 5px;
-    font-size: 1.3rem;
+    bottom: 9.3px;
+    font-size: 1.1rem;
+    color: lightgrey;
+}
+
+.logo.logo-video {
+    font-size: 1.2rem;
+}
+.logo.logo-img {
+    font-size: 1.4rem;
 }
 

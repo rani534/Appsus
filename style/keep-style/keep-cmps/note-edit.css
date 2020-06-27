@@ -1,11 +1,14 @@
 .note-edit .btn{
     outline: none;
-    background-color: #fff;
+    background: none;
     border: 0;
+    color: lightgrey;
+    font-size: 1.1rem;
 }
 
 .note-edit .btn:hover{
     cursor: pointer;
+    color: black;
 }
 
 .note-edit{

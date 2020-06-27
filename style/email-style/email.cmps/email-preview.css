@@ -13,11 +13,21 @@
     font-weight: bold
 }
 
-/* .envelope {
-    display: none;
+.email-preview .email-subject {
+    margin-inline-end: 2rem;
 }
-.email-preview:hover + .envelope{
-    display: block;
-}
- */
 
+.envelope {
+    position: absolute;
+}
+
+.envelope .btn {
+    border: 0;
+    background-color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.email-preview:hover {
+    cursor: pointer;
+}

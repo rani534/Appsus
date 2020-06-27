@@ -3,7 +3,7 @@ import { noteService } from "../keep-services/keep-service.js";
 export default {
   template: `
    <section>
-      <input ref="input" @input="setLastRequest" v-model="txt" @keyup.enter="addVideoNote" type="text" placeholder="Enter Video URL..." />
+      <input class="note-input" ref="input" @input="setLastRequest" v-model="txt" @keyup.enter="addVideoNote" type="text" placeholder="Enter Video URL..." />
    </section>
     `,
   data() {

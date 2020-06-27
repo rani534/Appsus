@@ -1,0 +1,20 @@
+.note-input{
+    padding-left: 5px;
+    border: 0;
+    outline: none;
+    height: 2rem;
+}
+
+.add-notes .btn{
+    color: lightgray;
+    outline: none;
+}
+
+.add-notes .btn :hover{
+    cursor: pointer;
+    color: #000;
+}
+
+.add-notes .btn:target {
+    color: #000;
+}

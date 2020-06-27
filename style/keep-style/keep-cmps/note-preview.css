@@ -8,6 +8,7 @@
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
+    background-color: #fff;
 }
 .note-preview > *{
     width: 100%;
@@ -27,3 +28,4 @@
     bottom: 5px;
     font-size: 1.3rem;
 }
+

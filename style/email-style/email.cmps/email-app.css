@@ -1,10 +1,22 @@
 .email-nav-bar{
     position: fixed;
+    padding-inline-start: 20px;
 }
 
 .p-inbox{
     display: inline-block;
     margin-inline-end: 10px;
+}
+.inbox-container{
+    height: 1.875rem;
+}
+
+.compose-btn{
+    background: none;
+    border-radius: 20px;
+    outline: none;
+    height: 40px;
+    width: 110px;
 }
 
 

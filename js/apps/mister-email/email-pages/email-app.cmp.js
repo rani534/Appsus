@@ -14,8 +14,9 @@ export default {
     <section class="email-app">
        <h1>EMAIL app</h1>
        <email-filter></email-filter>
-       <button @click="addEmail">+ Compose</button>
+       <div class="app-container flex">
        <nav class="email-nav-bar column-layout">
+       <button class="compose-btn" @click="addEmail">Compose +</button>
         <add-email @sended="sended" v-if="isAddingEmail"></add-email>
         <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
         <p>Starred
@@ -23,13 +24,13 @@ export default {
         </p>
         <p>Sent Mail</p>
         <p>Drafts</p>
-
-       </nav> 
+        </nav> 
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>
            <router-view/> 
        </main>
+       </div>
     </section>
     `,
   data() {

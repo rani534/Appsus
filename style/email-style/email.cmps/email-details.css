@@ -1,9 +1,16 @@
-.email-details-p{
+.email-details{
     max-width: 70%;
     margin: 0 auto;
     padding: 0;
 }
 
-.close-details-bt{
+.close-details-btn{
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    border: 0;
+}
 
+.close-details-btn:hover{
+    cursor: pointer;
 }

@@ -18,7 +18,7 @@ li.email-preview:not(:last-child) {
 }
 
 .mail-subject-container{
-    max-width: 95%;
+    width: 100%;
 }
 
 .email-body {
@@ -46,11 +46,12 @@ li.email-preview:not(:last-child) {
 
 .envelope .btn {
     border: 0;
-    background-color: white;
+    background: none;
     font-size: 1rem;
     outline: none;
 }
 
 .email-preview:hover {
     cursor: pointer;
+    background-color: #1311111a;
 }

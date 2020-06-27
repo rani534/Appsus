@@ -1,8 +1,8 @@
 .keep-app{
     margin: 0 auto;
     background-color: lightgrey;
-    min-height: 89.4vh;;
-
+    min-height: 89.4vh;
+    padding-top: 60px;
 }
 .keep-app h1{
     margin: 0;
@@ -17,8 +17,12 @@
     margin-bottom: 40px;
 }
 
-
-
+.keep-app .note-logo-img{
+    width: 110px;
+    padding: 10px;
+    position: absolute;
+    top: 90px;
+}
 
 .btn-add-notes-container{
     width: 30%;

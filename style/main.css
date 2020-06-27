@@ -3,7 +3,7 @@
 @import './book-style/main.css';
 @import './keep-style/main-keep.css';
 @import './email-style/email-main.css';
-
+@import './home-page.css';
 * {
     box-sizing: border-box;
 }

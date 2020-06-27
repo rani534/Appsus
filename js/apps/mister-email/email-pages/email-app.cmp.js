@@ -4,19 +4,22 @@ import { eventBus } from '../email-services/event-bus.service.js';
 
 
 import emailList from "../email-cmps/email-list.cmp.js";
-import emailHeader from '../email-cmps/email-header.cmp.js'
-import emailStatus from '../email-cmps/email-status.cmp.js'
-
-
+import emailFilter from '../email-cmps/email-filter.cmp.js';
+import emailStatus from '../email-cmps/email-status.cmp.js';
+import addEmail from '../email-cmps/add-email.cpm.js';
 
 export default {
   router: myRouter,
   template: `
     <section class="email-app">
        <h1>EMAIL app</h1>
-       <email-header ></email-header>
+       <email-filter></email-filter>
+       <button @click="addEmail">+ Compose</button>
+
+       <add-email v-if="isAddingEmail"></add-email>
+
        <email-status :emails="emails"></email-status>
-       <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list>
+       <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>
            <router-view/> 
@@ -28,7 +31,8 @@ export default {
       emails: null,
       search: null,
       selectedEmail: null,
-      filterBy: 'all'
+      filterBy: 'all',
+      isAddingEmail: false
 
     };
   },
@@ -66,12 +70,16 @@ export default {
     setFilter(filterBy) {
       this.filterBy = filterBy;
     },
+    addEmail(){
+      this.selectedEmail = true
+      this.isAddingEmail = true
+    }
   },
   components: {
     emailList,
-    emailHeader,
+    emailFilter,
     emailStatus,
-
+    addEmail
   },
   created() {
     emailService.query().then((emails) => (this.emails = emails));

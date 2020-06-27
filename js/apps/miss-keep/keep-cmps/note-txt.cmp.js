@@ -7,7 +7,7 @@ export default {
         <p>{{txt}}</p>  
         <div class="logo logo-txt">
           <i class="fas fa-font"></i>
-        </div>        
+         </div>        
         <textarea  ref="textarea" v-model="txt" v-if="isOnEdit" @blur="setTxt" placeholder="Enter text..."></textarea>
     </section>
     `,

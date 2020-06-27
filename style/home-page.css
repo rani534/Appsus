@@ -10,3 +10,8 @@
     /* object-fit: cover; */
     position: fixed;
 }
+.home-page-title{
+    font-size: 50px;
+    font-family: cursive;
+    text-align: center;
+}

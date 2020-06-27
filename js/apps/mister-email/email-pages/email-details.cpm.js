@@ -5,6 +5,9 @@ export default {
   template: `
     <section v-if="email" class="email-details">
     <button class="btn close-details-btn" @click="close">X</button>
+    <h3 class="email-subject">{{email.subject}}</h3>
+    
+    <h4 class="sent-by">{{email.sentBy}}<span class="email-address"><{{email.emailAddress}}></span></h4>
          <p class="email-details-p">{{email.body}}</p>
     </section>
     `,

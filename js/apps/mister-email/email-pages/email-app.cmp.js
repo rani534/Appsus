@@ -1,8 +1,6 @@
 import { emailService } from "../email-services/email-service.js";
 import { myRouter } from "../email-routes.js";
 import { eventBus } from '../email-services/event-bus.service.js';
-
-
 import emailList from "../email-cmps/email-list.cmp.js";
 import emailFilter from '../email-cmps/email-filter.cmp.js';
 import emailStatus from '../email-cmps/email-status.cmp.js';
@@ -12,19 +10,19 @@ export default {
   router: myRouter,
   template: `
     <section class="email-app">
-       <h1>EMAIL app</h1>
+      <img class="email-logo-img" src="../../../../imgs/mail-icon.png">
        <email-filter></email-filter>
        <div class="app-container flex">
        <nav class="email-nav-bar column-layout">
        <button class="compose-btn" @click="addEmail">Compose +</button>
-        <add-email @sended="sended" v-if="isAddingEmail"></add-email>
-        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
-        <p>Starred
-        <i class="far fa-star"></i>
-        </p>
-        <p>Sent Mail</p>
-        <p>Drafts</p>
-        </nav> 
+       <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
+       <p>Starred
+       <i class="far fa-star"></i>
+       </p>
+       <p>Sent Mail</p>
+       <p>Drafts</p>
+       </nav> 
+       <add-email @sended="sended" v-if="isAddingEmail"></add-email>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>

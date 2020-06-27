@@ -14,3 +14,10 @@
 .close-details-btn:hover{
     cursor: pointer;
 }
+
+.email-details .email-address{
+    margin-inline-start: 20px;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    font-weight: 400;
+}

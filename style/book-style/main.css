@@ -15,8 +15,8 @@
     padding-left: 10px;
 }
 
-img {
-    width: 40px;
+.book-preview img {
+    width: 100%;
 }
 
 .book-preview h3{
@@ -35,14 +35,25 @@ img {
     padding: 5px;
     padding-top: 10px;
     border: 3px solid black;
-    height: 170px;
-    width: 120px;
+    height: 300px;
+    width: 180px;
     margin-bottom: 20px;
     background-color: blanchedalmond;
+    text-align: center;
 }
+
 
 .book-preview:hover {
     cursor: pointer;
+}
+
+.book-preview h4{
+    margin: 0;
+}
+
+.book-preview a{
+    text-decoration: none;
+    color: rgb(97, 94, 94);
 }
 
 .book-preview pre{
@@ -77,4 +88,8 @@ main {
     align-self: center;
     margin-top: 1rem;
     margin-inline-end: 20px;
+}
+
+.book-img{
+    width: 100px;
 }

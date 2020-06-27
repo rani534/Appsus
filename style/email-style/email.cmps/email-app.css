@@ -3,6 +3,10 @@
     padding-inline-start: 20px;
 }
 
+.email-nav-bar >*:hover{
+    cursor: pointer;
+}
+
 .p-inbox{
     display: inline-block;
     margin-inline-end: 10px;
@@ -17,6 +21,18 @@
     outline: none;
     height: 40px;
     width: 110px;
+}
+
+.email-app .email-logo-img{
+    width: 90px;
+    padding: 10px;
+    position: absolute;
+    top: 77px;
+    left: 20px;
+}
+
+.email-app .app-container{
+    padding-top: 78px;
 }
 
 

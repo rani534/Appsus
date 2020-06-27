@@ -1,0 +1,40 @@
+.add-email {
+    width: 100%;
+}
+
+.add-email form {
+    width: 70%;
+    margin: 0 auto;
+    -webkit-box-shadow: 6px 11px 16px 0px rgba(175, 175, 175, 0.95);
+    box-shadow: 6px 11px 16px 0px rgba(175, 175, 175, 0.95);
+    border-right: lightgray;
+    border-left: lightgray;
+}
+
+.add-email form>* {
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+.add-email form input{
+    height: 2rem;
+}
+
+.add-email textarea {
+    height: 200px;
+    border: 0;
+}
+
+.add-email .btn {
+    outline: none;
+    border: 0;
+    border-bottom: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(15, 134, 189);
+    height: 2.5rem;
+    width: 4.5rem;
+}

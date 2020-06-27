@@ -56,9 +56,7 @@ export default {
         }
     },
     computed:{
-        isReviewed(){
-            console.log(this.book.title);
-            
+        isReviewed(){          
             return this.book.reviews.length > 0;
         },
         formattedDate(){

@@ -8,7 +8,7 @@ export default {
        <router-link to="/"> Home Page </router-link> 
        <router-link to="/book"> book App </router-link> 
        <router-link to="/keep"> Miss keep </router-link> 
-       <router-link @click.native="consol" to="/email"> mister email </router-link> 
+       <router-link to="/email"> mister email </router-link> 
       </nav>
     </header>
     `,
@@ -16,13 +16,5 @@ export default {
       return {
         currInputComponent: null
       }
-    },
-    methods:{
-
-      consol(){
-        console.log('clicked')
-      }
-    }
-    
-
+    },  
 }

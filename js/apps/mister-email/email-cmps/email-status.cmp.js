@@ -1,19 +1,20 @@
 export default {
   props: ["emails"],
   template: `
-    <section class="email-status">      
-      <h3 v-if="emails">{{getNumOfReadEmails}}</h3>
+    <section class="email-status" v-if="emails">      
+      {{getNumOfReadEmails}}
+      
     </section>
       `,
-//   data(){
-//       return {
-//           readEmail:
-//       }
-//   },
+  //   data(){
+  //       return {
+  //           readEmail:
+  //       }
+  //   },
   computed: {
     getNumOfReadEmails() {
-      const emails =  this.emails.filter(email =>{
-          return email.isRead
+      const emails = this.emails.filter(email => {
+        return email.isRead
       })
       return emails.length
     },

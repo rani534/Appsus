@@ -27,7 +27,7 @@ export default {
       let currTime = new Date();
       let time = new Date(this.email.sentAt)
       if (time.getDate() === currTime.getDate() && time.getMonth() === currTime.getMonth()) {
-        return `${time.getHours()}:${time.getMinutes()}`
+        return time.toLocaleTimeString().substring(0,5)
       }
       else return `${time.getDate()} / ${time.getMonth() + 1}`
     }

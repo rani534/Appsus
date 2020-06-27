@@ -11,7 +11,4 @@ export default{
   components:{
     notePreview
   },
-  created(){
-      console.log('dd')
-  }
 }

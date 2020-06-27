@@ -10,7 +10,7 @@ export default {
   router: myRouter,
   template: `
     <section class="email-app">
-      <img class="email-logo-img" src="/imgs/mail-icon.png">
+      <img class="email-logo-img" src="imgs/mail-icon.png">
        <email-filter></email-filter>
        <div class="app-container flex">
        <nav class="email-nav-bar column-layout">

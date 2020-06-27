@@ -13,7 +13,7 @@ import inputNoteVideo from "../keep-cmps/input-note-video.cmp.js";
 export default {
   template: ` 
     <section class="keep-app ">
-    <img class="note-logo-img" src="/imgs/notes-icon.png" >
+    <img class="note-logo-img" src="imgs/notes-icon.png" >
      
 
       <div class="add-notes flex ">

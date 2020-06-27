@@ -10,10 +10,11 @@ import noteEdit from './note-edit.cmp.js';
 export default {
   props: ["note"],
   template: `
-          <li v-if="currComponent" class="note-preview column-layout">
+          <li v-if="currComponent" class="note-preview column-layout ">
             <component :note="note" :is="currComponent"></component> 
             <note-edit :note="note"></note-edit>
-          </li>
+         </li>
+          
       `,
   data() {
     return {

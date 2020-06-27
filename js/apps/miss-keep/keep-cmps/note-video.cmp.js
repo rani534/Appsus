@@ -3,7 +3,7 @@ import { noteService } from "../keep-services/keep-service.js";
 export default {
     props: ["note"],
     template: `
-   <section class="note-video" >
+   <section class="note-video " >
         <iframe :src="url"></iframe>
         <div class="logo logo-video">
             <i class="fab fa-youtube"></i>

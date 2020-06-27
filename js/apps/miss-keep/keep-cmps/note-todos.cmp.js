@@ -4,7 +4,7 @@ import { noteService } from "../keep-services/keep-service.js";
 export default {
   props: ["note"],
   template: `
-   <section class="note-todos column-layout" >
+   <section class="note-todos" >
        <ul>
        
            <li :class="{marked : todos[idx].doneAt }" class="flex space-between" @click="mark(idx)" v-for="(todo,idx) in todos">

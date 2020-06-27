@@ -9,6 +9,7 @@
     padding: 5px;
     margin-bottom: 10px;
     background-color: #fff;
+    page-break-inside: avoid;
 }
 .note-preview > *{
     width: 100%;

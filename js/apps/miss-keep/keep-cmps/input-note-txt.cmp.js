@@ -15,6 +15,7 @@ export default {
     addTxtNote() {
       noteService.addTxtNote(this.txt);
       this.txt = "";
+      noteService.setLastRequest(this.txt);
     },
     setLastRequest() {
       noteService.setLastRequest(this.txt);

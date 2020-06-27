@@ -15,6 +15,7 @@ export default {
     addImgNote() {
       noteService.addImgNote(this.txt);
       this.txt = "";
+      noteService.setLastRequest(this.txt);
     },
     setLastRequest() {
       noteService.setLastRequest(this.txt);

@@ -3,7 +3,7 @@ import { noteService } from "../keep-services/keep-service.js";
 export default {
   props: ["note"],
   template: `
-   <section class="note-txt column-layout" >
+   <section class="note-txt" >
         <p>{{txt}}</p>
         
         <div class="logo logo-txt">

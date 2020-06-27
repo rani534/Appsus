@@ -3,7 +3,7 @@ import { noteService } from "../keep-services/keep-service.js";
 export default {
   props: ["note"],
   template: `
-   <section class="note-img column-layout" >
+   <section class="note-img " >
    <img :src="url" />
         <div class="logo logo-img">
             <i class="far fa-image"></i>

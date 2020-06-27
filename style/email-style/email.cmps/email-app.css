@@ -1,0 +1,10 @@
+.email-nav-bar{
+    position: fixed;
+}
+
+.p-inbox{
+    display: inline-block;
+    margin-inline-end: 10px;
+}
+
+

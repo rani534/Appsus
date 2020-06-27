@@ -91,8 +91,7 @@ function unMarkEmail(emailId){
   const idx = emails.findIndex(email => {
     return email.id === emailId
   })
-  console.log(idx);
-  emails[idx].isRead = true
+  emails[idx].isRead = false
   gEmails = emails;
   Utils.storeToStorage("emails", gEmails);
   return Promise.resolve(gEmails)

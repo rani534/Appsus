@@ -15,10 +15,16 @@ export default {
        <h1>EMAIL app</h1>
        <email-filter></email-filter>
        <button @click="addEmail">+ Compose</button>
+       <nav class="email-nav-bar column-layout">
+        <add-email @sended="sended" v-if="isAddingEmail"></add-email>
+        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
+        <p>Starred
+        <i class="far fa-star"></i>
+        </p>
+        <p>Sent Mail</p>
+        <p>Drafts</p>
 
-       <add-email @sended="sended" v-if="isAddingEmail"></add-email>
-
-       <email-status :emails="emails"></email-status>
+       </nav> 
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>

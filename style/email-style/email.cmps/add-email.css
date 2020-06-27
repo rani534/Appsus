@@ -38,3 +38,13 @@
     height: 2.5rem;
     width: 4.5rem;
 }
+
+.add-email .delete-btn i{
+    position: relative;
+    bottom: -10px;
+    font-size: 27px;
+}
+
+.add-email .delete-btn:hover{
+    cursor: pointer;
+}

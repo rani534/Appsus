@@ -13,12 +13,9 @@ li.email-preview{
     width: 100%;
 }
 
-li.email-preview:not(:last-child) {
-    border-bottom: 1px solid black;
-}
-
 .mail-subject-container{
     width: 100%;
+    border-bottom: 1px solid lightgray;
 }
 
 .email-body {

@@ -2,10 +2,11 @@
     height: 80px;
     background-color: rgba(248, 185, 66, 0.308);
     padding: 20px;
-    color: black;
+    color: white;
+    
 }
 .app-header .router-link-exact-active {
-    color: black
+    color: white
 }
 
 .app-header a{
@@ -13,8 +14,15 @@
 }
 
 .app-header a:hover{
-    color: black;
+    color: white;
 }
 .app-header h1{
+    color: rgb(139, 138, 138);
     font-family: cursive;
+    font-size: 42px
+}
+
+.app-header nav{
+    margin-inline-end: 20px;
+    width: 20%;
 }

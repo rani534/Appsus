@@ -93,6 +93,47 @@ We hope to welcome you back on the RentSpain website in the near future
     sentBy: 'Rani',
     emailAddress: 'rani_Rahav_HonoraryConsulOfSeychellesIslands@gmail.com',
     id: Utils.getRandomId(),
+    subject: `מצב החסה בשטחים`,
+    body: `
+    לקוחות אהובים,
+     בשעה טובה ומוצלחת חזרנו להביא לכם את החסה האהובה עליכם, אורגנית טרייה ושטופה...
+     שמחים לשרת אתכם שוב לאחר התקופה הקשה שעברנו
+     ... מחכים לכם בשוק הנמל בכל יום בין השעות 12:00 ל-17:00 לשירותכם תמיד,
+      יום אסל יום חסל
+    `,
+    isRead: true,
+    sentAt: 1593010094350,
+  },
+  {
+    sentBy: 'Rani',
+    emailAddress: 'rani_Rahav_HonoraryConsulOfSeychellesIslands@gmail.com',
+    id: Utils.getRandomId(),
+    subject: `working holiday visa`,
+    body: `dear visitor: unfortiently your visa request was rejected because your criminal record... thanks, Australian visa department
+    
+    `,
+    isRead: true,
+    sentAt: 1593000094350,
+  },
+  {
+    sentBy: 'Rani',
+    emailAddress: 'rani_Rahav_HonoraryConsulOfSeychellesIslands@gmail.com',
+    id: Utils.getRandomId(),
+    subject: `Your cancellation request was successful – ES683059570`,
+    body: `
+    Dear Yair Haraz,
+
+As per your instructions we have now cancelled your booking. Any refund amount due should be in your bank account within the next 10 business days.
+
+We hope to welcome you back on the RentSpain website in the near future    
+    `,
+    isRead: true,
+    sentAt: 1593010094350,
+  },
+  {
+    sentBy: 'Rani',
+    emailAddress: 'rani_Rahav_HonoraryConsulOfSeychellesIslands@gmail.com',
+    id: Utils.getRandomId(),
     subject: `These projects teach you how to become an AWS Cloud Architect`,
     body: `
     Drive your organization’s cloud architecture strategy

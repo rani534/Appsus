@@ -1,6 +1,6 @@
 .keep-app{
     margin: 0 auto;
-    background-color: lightgrey;
+    background-color:rgba(248, 185, 66, 0.308);;
     min-height: 89.4vh;
     padding-top: 60px;
 }
@@ -17,11 +17,14 @@
     margin-bottom: 40px;
 }
 
-.keep-app .note-logo-img{
-    width: 110px;
+.keep-app .note-logo{
+    font-family: cursive;
+    font-size: 30px;
     padding: 10px;
     position: absolute;
-    top: 90px;
+    top: 60px;
+    left: 20px;
+    color: rgb(139, 138, 138);
 }
 
 .btn-add-notes-container{

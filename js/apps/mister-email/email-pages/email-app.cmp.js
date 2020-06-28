@@ -22,7 +22,7 @@ export default {
        <p>Sent Mail</p>
        <p>Drafts</p>
        </nav> 
-       <add-email @sended="sended" v-if="isAddingEmail"></add-email>
+       <add-email  @sended="sended" v-if="isAddingEmail"></add-email>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>

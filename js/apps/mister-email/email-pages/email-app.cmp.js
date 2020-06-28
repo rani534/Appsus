@@ -25,7 +25,7 @@ export default {
        <add-email  @backToList="backToList" v-if="isAddingEmail"></add-email>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
-       <main>
+       <main style="background:none;">
            <router-view/> 
        </main>
        </div>

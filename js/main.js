@@ -5,9 +5,9 @@ new Vue({
     el: "#app",
     router: myRouter,
     template: `
-    <div>
+    <div >
       <app-header></app-header>
-        <main>
+        <main class="main-appsus">
             <router-view />
         </main>
 
@@ -18,6 +18,9 @@ new Vue({
     `,
     components: {
         appHeader
+    },
+    created(){
+        // this.$router.push("/");
     }
 });
 

@@ -13,6 +13,9 @@ export default {
             <div class="envelope" v-show="isMoveOn" >
               <button v-if="isRead" @click.stop="mark" class=" btn mark-email"><i class="fas fa-envelope"></i></button>
               <button v-else @click.stop="mark" class="btn unmark-email"><i class="fas fa-envelope-open"></i></button>
+              <button @click.stop="deleteEmail" class="btn delete-email-btn" title="Delete Email">
+                 <i class="fas fa-trash-alt"></i>
+             </button>
             </div> 
         </li>     
           `,
@@ -46,6 +49,9 @@ export default {
     },
     resetMove() {
       this.isMoveOn = false
+    },
+    deleteEmail(){
+      eventBus.$emit("delete", this.email.id);
     }
   },
 };

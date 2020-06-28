@@ -29,8 +29,8 @@ li.email-preview{
     font-weight: bold
 }
 
-.email-preview .email-sender{
-    margin-inline-end: 2rem
+.email-preview .email-sender{   
+    margin-inline-end: 4rem;
 }
 
 .email-preview .email-subject {

@@ -5,7 +5,7 @@ import {bookService} from '../book-services/book.service.js';
 export default {
   template: `
   <section class="book-add">
-    <input @input="searchBook" type="text" v-model="search" placeholder="search for a book"/>
+    <input class="add-book-input" @input="searchBook" type="text" v-model="search" placeholder="Add book from Google"/>
      <ul v-if="books">
        <li v-for="book in books" :key="book.id">
         {{book.volumeInfo.title}}
@@ -26,7 +26,7 @@ export default {
       bookService.getGoogleBooksByAxios(this.search)
       .then((books) => {
         this.books = books
-        console.log(this.books);
+        
       });
     },
     addBookToService(bookId){

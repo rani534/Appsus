@@ -4,7 +4,8 @@ export const emailService = {
   deleteEmail,
   getEmailById,
   toggleIsRead,
-  unMarkEmail
+  unMarkEmail,
+  deleteEmail
 };
 
 import { Utils } from "../../../services/utils-service.js";
@@ -152,13 +153,14 @@ function addEmail(newEmail) {
   gEmails.unshift(email);
   Utils.storeToStorage("emails", gEmails);
 }
-function deleteEmail(emailId) {
-  const idx = gEmails.findIndex((email) => {
-    return email.id === emailId;
-  });
-  gEmails.splice(idx, 1);
-  Utils.storeToStorage("emails", gEmails);
-}
+
+// function deleteEmail(emailId) {
+//   const idx = gEmails.findIndex((email) => {
+//     return email.id === emailId;
+//   });
+//   gEmails.splice(idx, 1);
+//   Utils.storeToStorage("emails", gEmails);
+// }
 
 function getEmailById(emailId) {
   var emails = Utils.loadFromStorage('emails');
@@ -184,6 +186,18 @@ function unMarkEmail(emailId){
     return email.id === emailId
   })
   emails[idx].isRead = false
+  gEmails = emails;
+  Utils.storeToStorage("emails", gEmails);
+  return Promise.resolve(gEmails)
+}
+
+
+function deleteEmail(emailId){
+  var emails = Utils.loadFromStorage('emails');
+  const idx = emails.findIndex(email => {
+    return email.id === emailId
+  })
+  emails.splice(idx ,1)
   gEmails = emails;
   Utils.storeToStorage("emails", gEmails);
   return Promise.resolve(gEmails)

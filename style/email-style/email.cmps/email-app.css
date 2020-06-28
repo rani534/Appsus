@@ -9,6 +9,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .8s;
+    z-index: 1;
 }
 
 .menu-open .email-nav-bar {
@@ -74,7 +75,7 @@
 
 .email-app .app-container {
     padding-top: 78px;
-    max-width: 1040px;
+    max-width: 1400px;
 }
 
 .btn {
@@ -85,155 +86,3 @@
 
 /*  MEDIA QUERIES: */
 
-@media (max-width: 1040px) {
-    .email-app .app-container {
-        max-width: 920px;
-        margin: 0 auto;
-    }
-    ul.email-list {
-        max-width: 83%;
-        margin: 0px 0px 0px 15%;
-    }
-    .email-details {
-        max-width: 83%;
-        margin: 0px 0px 0px 15%;
-    }
-    .add-email {
-        max-width: 83%;
-        margin: 0px 0px 0px 15%;
-    }
-}
-
-@media (max-width: 920px) {
-    .email-app .app-container {
-        max-width: 760px;
-    }
-    ul.email-list {
-        max-width: 85%;
-        margin: 0px 0px 0px 16%;
-    }
-    .email-details {
-        max-width: 85%;
-        margin: 0px 0px 0px 16%;
-    }
-    .add-email {
-        max-width: 85%;
-        margin: 0px 0px 0px 16%;
-    }
-    .email-preview .email-subject {
-        margin-inline-start: 1.5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 0.85rem;
-    }
-    .email-preview .email-body {
-        font-size: 0.77rem;
-    }
-    .email-preview .email-time {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .email-app .app-container {
-        /* max-width: 650px; */
-    }
-    .email-filter {
-        right: 28%;
-        width: 33%;
-    }
-    ul.email-list {
-        max-width: 85%;
-        margin: 0px 0px 0px 18%;
-    }
-    .email-details {
-        max-width: 85%;
-        margin: 0px 0px 0px 18%;
-    }
-    .add-email {
-        max-width: 85%;
-        margin: 0px 0px 0px 18%;
-    }
-    .email-preview .email-subject {
-        margin-inline-start: 1.5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 0.85rem;
-    }
-    .email-preview .email-time {
-        font-size: 12px;
-        width: 60px;
-    }
-    .email-nav-bar {
-        padding-inline-start: 15px;
-        left: 0;
-    }
-    .email-app h1.email-logo {
-        left: 5px;
-    }
-}
-
-@media (max-width: 700px) {
-    ul.email-list {
-        max-width: 100%;
-        margin: 0;
-    }
-    .email-details {
-        width: 100%;
-        margin: 0;
-    }
-    .add-email {
-        width: 100%;
-        margin: 0;
-    }
-    .email-filter {
-        right: 25%;
-        width: 50%;
-        top: 4.5rem;
-    }
-    .email-nav-bar {
-        display: none;
-        transform: translateX(100%);
-        transition: transform .8s, box-shadow .3s;
-    }
-    .hamburger-btn {
-        display: block;
-    }
-    .email-app h1.email-logo {
-        top: 84px;
-    }
-    .email-nav-bar {
-        height: 100%;
-        width: 50vw;
-    }
-}
-
-@media (max-width: 600px) {
-    .keep-app {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .note-list {
-        column-count: 1;
-    }
-    .note-preview {
-        width: 90%;
-    }
-    .note-edit {
-        width: 60%
-    }
-    .note-edit .btn {
-        font-size: 1.1rem;
-    }
-    .logo, .logo.logo-video {
-        font-size: 1.4rem;
-    }
-    .logo.logo-img {
-        font-size: 1.2rem;
-    }
-    li.note-preview {
-        margin: 20px auto;
-    }
-}

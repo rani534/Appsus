@@ -17,7 +17,7 @@ export default {
        <nav ref="nav" class="email-nav-bar column-layout">
        <button class="compose-btn" @click="addEmail">Compose +</button>
        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
-       <p>Starred
+       <p class="star-btn">Starred
        <i class="far fa-star"></i>
        </p>
        <p>Sent Mail</p>
@@ -77,6 +77,7 @@ export default {
       this.filterBy = filterBy;
     },
     addEmail() {
+      // document.body.classList.toggle('menu-open');
       this.selectedEmail = true;
       this.isAddingEmail = true;
     },

@@ -1,0 +1,141 @@
+@media (max-width: 1040px) {
+    .email-app .app-container {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    ul.email-list {
+        max-width: 83%;
+        margin: 0px 0px 0px 15%;
+    }
+    .email-details {
+        max-width: 100%;
+        margin: 0px 0px 0px 15%;
+    }
+    .add-email {
+        max-width: 83%;
+        margin: 0px 0px 0px 15%;
+    }
+}
+
+@media (max-width: 920px) {
+    .email-app .app-container {
+        max-width: 760px;
+    }
+    ul.email-list {
+        max-width: 85%;
+        margin: 0px 0px 0px 16%;
+    }
+    .email-details {
+        max-width: 85%;
+        margin: 0px 0px 0px 16%;
+    }
+    .add-email {
+        max-width: 85%;
+        margin: 0px 0px 0px 16%;
+    }
+    .email-preview .email-subject {
+        margin-inline-start: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.85rem;
+    }
+    .email-preview .email-body {
+        font-size: 0.77rem;
+    }
+    .email-preview .email-time {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .email-filter {
+        right: 28%;
+        width: 33%;
+    }
+    ul.email-list {
+        max-width: 85%;
+        margin: 0px 0px 0px 18%;
+    }
+    .email-details {
+        max-width: 75%;
+        margin: 0px 0px 0px 18%;
+    }
+    .add-email {
+        max-width: 85%;
+        margin: 0px 0px 0px 18%;
+    }
+    .email-preview .email-subject {
+        margin-inline-start: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.85rem;
+    }
+    .email-preview .email-time {
+        font-size: 12px;
+        width: 60px;
+    }
+    .email-nav-bar {
+        padding-inline-start: 15px;
+        left: 0;
+    }
+    .email-app h1.email-logo {
+        left: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    ul.email-list {
+        max-width: 100%;
+        margin: 0;
+    }
+    .email-details {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .add-email {
+        max-width: 100%;
+        margin: 0;
+    }
+    .email-filter {
+        right: 25%;
+        width: 50%;
+        top: 4.5rem;
+    }
+    .email-app .email-nav-bar {
+        display: none;
+       transform: translateX(100%);
+       background-color:  #fce9c4;
+       transform: translateX(0);
+       box-shadow: -6px 0px 14px rgba(0, 0, 0, 0.2);
+       height: 100%;
+       top: 0;
+       width: 37%;
+       opacity: 0.75;
+      z-index: 2;
+    }
+    .hamburger-btn {
+        display: block;
+    }
+    .email-app h1.email-logo {
+        top: 84px;
+    }
+    .email-nav-bar {
+        height: 100%;
+        width: 50vw;
+    }
+    .email-nav-bar > *{
+        font-size: 25px;
+    }
+    .compose-btn{
+        width: 155px;
+        height: 50px;
+        border-radius: 9999px;
+        font-size: 25px
+    }
+    .star-btn{
+        margin-top: 50px;
+        margin-bottom: -10px;
+    }
+}

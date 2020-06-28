@@ -6,6 +6,10 @@
 @import './home-page.css';
 
 
+@import './email-style/email-mediaqueries.css';
+@import './keep-style/keep-mediaqueries.css';
+
+
 html{
     font-family: cursive;
     margin: 0;

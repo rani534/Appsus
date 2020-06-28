@@ -13,7 +13,7 @@ export default {
             <div class="envelope" v-show="isMoveOn" >
               <button v-if="isRead" @click.stop="mark" class=" btn mark-email"><i class="fas fa-envelope"></i></button>
               <button v-else @click.stop="mark" class="btn unmark-email"><i class="fas fa-envelope-open"></i></button>
-              <button @click.stop="deleteEmail" class="btn delete-email-btn" title="Delete Email">
+              <button @click="deleteEmail" class="btn delete-email-btn" title="Delete Email">
                  <i class="fas fa-trash-alt"></i>
              </button>
             </div> 
@@ -30,7 +30,8 @@ export default {
       let currTime = new Date();
       let time = new Date(this.email.sentAt)
       if (time.getDate() === currTime.getDate() && time.getMonth() === currTime.getMonth()) {
-        return time.toLocaleTimeString().substring(0,5)
+        if(time.toLocaleTimeString().split(':')[0].length === 1) return time.toLocaleTimeString().substring(0,4)
+        else return time.toLocaleTimeString().substring(0,5)
       }
       else return `${time.getDate()} / ${time.getMonth() + 1}`
     }

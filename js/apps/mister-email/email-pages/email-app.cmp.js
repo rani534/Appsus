@@ -22,7 +22,7 @@ export default {
        <p>Sent Mail</p>
        <p>Drafts</p>
        </nav> 
-       <add-email  @sended="sended" v-if="isAddingEmail"></add-email>
+       <add-email  @backToList="backToList" v-if="isAddingEmail"></add-email>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
        <main>
@@ -77,7 +77,7 @@ export default {
       this.selectedEmail = true;
       this.isAddingEmail = true;
     },
-    sended() {
+    backToList() {
       this.selectedEmail = false;
       this.isAddingEmail = false;
     },

@@ -10,9 +10,9 @@ export default {
   router: myRouter,
   template: `
     <section class="email-app">
-      <img class="email-logo-img" src="imgs/mail-icon.png">
-       <email-filter></email-filter>
-       <div class="app-container flex">
+    <email-filter></email-filter>
+    <div class="app-container flex">
+    <h1 class="email-logo">Susmail</h1>
        <nav class="email-nav-bar column-layout">
        <button class="compose-btn" @click="addEmail">Compose +</button>
        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>

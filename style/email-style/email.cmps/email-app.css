@@ -1,6 +1,7 @@
 .email-nav-bar{
     position: fixed;
     padding-inline-start: 20px;
+    padding-top: 11px;
 }
 
 .email-nav-bar >*:hover{
@@ -23,18 +24,20 @@
     width: 110px;
 }
 
-.email-app .email-logo-img{
-    width: 90px;
+.email-app h1.email-logo{
+    font-family: cursive;
+    font-size: 30px;
     padding: 10px;
     position: absolute;
-    top: 77px;
+    top: 60px;
     left: 20px;
+    color: rgb(139, 138, 138);
 }
 
 .email-app .app-container{
     padding-top: 78px;
     height: 86vh;
-    background-color: aliceblue;
+    background-color:  rgba(248, 185, 66, 0.308);
 }
 
 

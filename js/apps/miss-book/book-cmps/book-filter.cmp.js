@@ -1,7 +1,7 @@
 export default{
   template: `
         <section class="book-filter input-container">
-        <img class="book-img" src="imgs/book.jpg">
+        <h1 class="book-logo">Susbook</h1>
         <section class="book-filter-container">
         <i class="fas fa-search"></i>
             <input class="txt-input" type="text" placeholder="search in books..." v-model="filterBy.searchStr" @input="filter"/>

@@ -17,7 +17,7 @@ export default {
     <i class="fas fa-search"></i>
     <input type="text" class="keep-app-input" placeholder="search in notes..."/>
     </section>
-    <img class="note-logo-img" src="imgs/notes-icon.png" >
+    <h1 class="note-logo">Susnote</h1>
      
 
       <div class="add-notes flex ">

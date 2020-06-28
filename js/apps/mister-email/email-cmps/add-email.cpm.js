@@ -9,7 +9,7 @@ export default {
             <textarea v-model="newEmail.body" class="email-body-textarea" placeholder=""></textarea>
             <div class="add-btns-container flex space-between">
                 <button class="btn send-btn">Send</button>
-                <span class="delete-btn"><i class="fas fa-trash-alt"></i></span>
+                <span @click="backToList" class="delete-btn"><i class="fas fa-trash-alt"></i></span> 
             </div>
         </form>
     </section>
@@ -20,20 +20,19 @@ export default {
                 subject: '',
                 body: '',
             },
-
-
         }
     },
     methods: {
         send() {
             this.$emit('sended')
             emailService.addEmail(this.newEmail)
+        },
+        backToList(){
+            this.$emit('sended')
         }
     },
     mounted() {
         this.$refs.input.focus()
 
-
     }
-
 }

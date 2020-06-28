@@ -195,13 +195,6 @@ function addEmail(newEmail) {
   Utils.storeToStorage("emails", gEmails);
 }
 
-// function deleteEmail(emailId) {
-//   const idx = gEmails.findIndex((email) => {
-//     return email.id === emailId;
-//   });
-//   gEmails.splice(idx, 1);
-//   Utils.storeToStorage("emails", gEmails);
-// }
 
 function getEmailById(emailId) {
   var emails = Utils.loadFromStorage('emails');

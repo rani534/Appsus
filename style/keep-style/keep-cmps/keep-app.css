@@ -1,6 +1,6 @@
 .keep-app{
     margin: 0 auto;
-    background-color:rgba(248, 185, 66, 0.308);;
+    /* background-color:rgba(248, 185, 66, 0.308);; */
     min-height: 89.4vh;
     padding-top: 60px;
 }
@@ -19,10 +19,10 @@
 
 .keep-app .note-logo{
     font-family: cursive;
-    font-size: 30px;
+    font-size: 33px;
     padding: 10px;
     position: absolute;
-    top: 60px;
+    top: 88px;
     left: 20px;
     color: rgb(139, 138, 138);
 }

@@ -1,23 +1,22 @@
-.email-details{
-    max-width: 70%;
-    margin: 0 auto;
-    padding: 0;
-    background: none;
-
+.email-details {
+    border: 0;
+    max-width: 75%;
+    margin: 0px 0px 0px 220px;
+    padding: 20px;
+    border: 1px solid lightgray;;
 }
 
-.close-details-btn{
+.close-details-btn {
     border-radius: 5px;
-    outline: none;
-    background: none;
+    font-size: 20px;
     border: 0;
 }
 
-.close-details-btn:hover{
+.close-details-btn:hover {
     cursor: pointer;
 }
 
-.email-details .email-address{
+.email-details .email-address {
     margin-inline-start: 20px;
     font-size: 0.8rem;
     font-family: sans-serif;

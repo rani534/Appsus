@@ -4,7 +4,7 @@ import { eventBus } from '../email-services/event-bus.service.js';
 export default {
   template: `
     <section v-if="email" class="email-details">
-    <button class="btn close-details-btn" @click="close">X</button>
+    <button class="btn close-details-btn" @click="close"><i class="fas fa-arrow-left"></i></button>
     <h3 class="email-subject">{{email.subject}}</h3>
     
     <h4 class="sent-by">{{email.sentBy}}<span class="email-address"><{{email.emailAddress}}></span></h4>

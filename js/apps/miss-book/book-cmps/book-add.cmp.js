@@ -4,7 +4,7 @@ import {bookService} from '../book-services/book.service.js';
 
 export default {
   template: `
-  <section class="book-add">
+  <section class="book-add column-layout">
     <input class="add-book-input" @input="searchBook" type="text" v-model="search" placeholder="Add book from Google"/>
      <ul v-if="books">
        <li v-for="book in books" :key="book.id">

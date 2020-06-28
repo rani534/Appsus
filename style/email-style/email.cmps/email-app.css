@@ -37,10 +37,12 @@
 .email-app .app-container{
     padding-top: 78px;
     height: 86vh;
-    background-color:  rgba(248, 185, 66, 0.308);
+    /* background-color:  rgba(248, 185, 66, 0.308); */
 }
 
 
 .btn{
     cursor: pointer;
+    background: none;
+    outline: none;
 }

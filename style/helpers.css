@@ -1,5 +1,23 @@
 
-/* helpers */
+/* HELPERS */
+
+/* BASE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+.btn{
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+/* LAYOUTS */
 
 .flex {
     display: flex;

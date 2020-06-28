@@ -1,5 +1,5 @@
 .app-main{
-    background-color: rgba(248, 185, 66, 0.308);;
+    /* background-color: rgba(248, 185, 66, 0.308);; */
 }
 
 .input-container {
@@ -139,8 +139,17 @@
      border: 0;
      outline: none;
      border-radius: 5px;
-     width: 200px;
+     width: 400px;
      height: 30px;
+ }
+
+ .book-add ul{
+    max-width: 400px;
+    padding-inline-start: 20px;
+ }
+
+ .book-add{
+     margin-top: 20px;
  }
 
  

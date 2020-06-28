@@ -7,7 +7,8 @@
     background-size: cover;
     object-fit: fill;
     position: fixed;
-    background-color: rgba(248, 185, 66, 0.308);
+    color: rgb(139, 138, 138);
+    /* background-color: rgba(248, 185, 66, 0.308); */
 }
 .home-page-title{
     font-size: 50px;
@@ -16,6 +17,6 @@
 }
 
 .cowboy-hat{
-    font-size: 300px;
+    font-size: 190px;
     margin: 0 auto;
 }

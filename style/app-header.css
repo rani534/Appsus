@@ -1,6 +1,5 @@
 .app-header{
     height: 80px;
-    /* background-color: rgba(248, 185, 66, 0.308); */
     padding: 20px;
     border-bottom: 1px solid rgb(220, 220, 220);
     
@@ -27,4 +26,14 @@
 .app-header nav{
     margin-inline-end: 20px;
     width: 24%;
+}
+
+@media (max-width: 840px){
+    .app-header a{
+        font-size: 18px;
+    } 
+    .app-header nav{
+        margin-inline-end: 10px;
+        width: 22%;
+    }
 }

@@ -113,7 +113,7 @@ main {
 }
 
 .book-filter-container .txt-input{
-    width: 70%;
+    width: 65%;
 }
 
 .book-filter-container .num-input{
@@ -125,3 +125,5 @@ main {
     align-self: center;
     color: #a0a0a0;
  }
+
+ 

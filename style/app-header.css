@@ -2,9 +2,10 @@
     height: 80px;
     background-color: rgba(248, 185, 66, 0.308);
     padding: 20px;
-    color: white;
+    border-bottom: 1px solid rgb(220, 220, 220);
     
 }
+
 .app-header .router-link-exact-active {
     color: white
 }

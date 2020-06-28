@@ -4,7 +4,7 @@ export default {
     template: `
     <section class="email-filter">     
      <i class="fas fa-search"></i>
-        <input placeholder="Search email..." @input="filterByTxt"/>  
+        <input placeholder="Search in emails..." @input="filterByTxt"/>  
             <select @change="filter">
                 <option  value="all">All</option>
                 <option  value="read">Read</option>

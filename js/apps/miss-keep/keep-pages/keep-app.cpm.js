@@ -13,6 +13,10 @@ import inputNoteVideo from "../keep-cmps/input-note-video.cmp.js";
 export default {
   template: ` 
     <section class="keep-app ">
+    <section class="keep-app-input-container">
+    <i class="fas fa-search"></i>
+    <input type="text" class="keep-app-input" placeholder="search in notes..."/>
+    </section>
     <img class="note-logo-img" src="imgs/notes-icon.png" >
      
 

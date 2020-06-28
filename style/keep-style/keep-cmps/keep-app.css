@@ -48,3 +48,28 @@
 
 }
 
+.keep-app-input-container{
+    padding-left: 5px;
+    position: absolute;
+    top: 1.5rem;
+    right: 39%;
+    display: flex;
+    width: 333px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: white;
+    /* justify-content: center; */
+    outline: none;
+    border: 0;
+}
+
+.keep-app-input-container input{
+    border: 0;
+    outline: none;
+}
+
+.keep-app-input-container i {
+    width: 6%;
+    align-self: center;
+    color: #a0a0a0;
+ }

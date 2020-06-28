@@ -3,7 +3,8 @@ export default{
         <section class="book-filter input-container">
         <img class="book-img" src="imgs/book.jpg">
         <section class="book-filter-container">
-            <input class="txt-input" type="text" placeholder="search in books" v-model="filterBy.searchStr" @input="filter"/>
+        <i class="fas fa-search"></i>
+            <input class="txt-input" type="text" placeholder="search in books..." v-model="filterBy.searchStr" @input="filter"/>
             <input class="num-input" type="number" placeholder="max price?" v-model.number="filterBy.maxPrice" @input="filter"/>
         </section>
             </section>

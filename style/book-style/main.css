@@ -93,3 +93,27 @@ main {
 .book-img{
     width: 100px;
 }
+
+.book-filter .book-filter-container{
+    position: absolute;
+    top: 1.5rem;
+    right: 39%;
+    display: flex;
+    width: 333px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: white;
+    justify-content: center
+}
+
+.book-filter-container input{
+    border: 0;
+}
+
+.book-filter-container .txt-input{
+    width: 70%;
+}
+
+.book-filter-container .num-input{
+    width: 27%;
+}

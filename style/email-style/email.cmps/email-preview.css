@@ -1,19 +1,17 @@
 .email-preview {
-    /* border: 1px solid black; */
     padding-right: 3px;
 }
 
-
-
-.email-preview .email-time{
+.email-preview .email-time {
     margin: 1rem;
+    font-weight: bold;
 }
 
-li.email-preview{
+li.email-preview {
     width: 100%;
 }
 
-.mail-subject-container{
+.mail-subject-container {
     width: 100%;
     border-bottom: 1px solid lightgray;
 }
@@ -22,19 +20,23 @@ li.email-preview{
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
 }
 
 .bold {
     font-weight: bold
 }
 
-.email-preview .email-sender{   
-    margin-inline-end: 4rem;
+.email-preview .email-sender {
+    margin-inline-start: 4rem;
 }
 
 .email-preview .email-subject {
-    margin-inline-end: 2rem;
+    margin-inline-start: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
 }
 
 .envelope {

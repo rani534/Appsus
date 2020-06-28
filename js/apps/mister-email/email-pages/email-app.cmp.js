@@ -10,10 +10,11 @@ export default {
   router: myRouter,
   template: `
     <section class="email-app">
+    <div class="screen" @click="closeNav"></div>
     <email-filter></email-filter>
     <div class="app-container flex">
     <h1 class="email-logo">Susmail</h1>
-       <nav class="email-nav-bar column-layout">
+       <nav ref="nav" class="email-nav-bar column-layout">
        <button class="compose-btn" @click="addEmail">Compose +</button>
        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
        <p>Starred
@@ -22,6 +23,8 @@ export default {
        <p>Sent Mail</p>
        <p>Drafts</p>
        </nav> 
+       <div @click="openNavBar" class="hamburger-btn"><i class="fas fa-bars"></i>
+       </div>
        <add-email  @backToList="backToList" v-if="isAddingEmail"></add-email>
        <email-list v-if="!selectedEmail" :emails="emailToShow" ></email-list> 
          
@@ -92,6 +95,14 @@ export default {
         this.emails = emails;
       })
     },
+    openNavBar(){
+      this.$refs.nav.style.display = 'block';
+      document.body.classList.toggle('menu-open')
+    },
+    closeNav(){
+      this.$refs.nav.style.display = 'none';
+      document.body.classList.toggle('menu-open');
+    }
   },
   components: {
     emailList,

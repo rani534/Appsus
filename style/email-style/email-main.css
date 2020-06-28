@@ -1,4 +1,3 @@
-@import './email.cmps/email-app.css';
 @import './email.cmps/email-header.css';
 @import './email.cmps/email-filter.css';
 @import './email.cmps/email-list.css';
@@ -6,3 +5,4 @@
 @import './email.cmps/email-details.css';
 @import './email.cmps/email-status.css';
 @import './email.cmps/add-email.css';
+@import './email.cmps/email-app.css';

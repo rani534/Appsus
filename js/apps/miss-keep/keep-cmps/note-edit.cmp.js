@@ -8,12 +8,10 @@ export default {
     template: `
     <section class="note-edit" >
 
-
-        
         <button  class="btn pin-btn" title="Pin note">
             <i class="fas fa-thumbtack"></i>
         </button>
-        <input ref="colorInput" v-model="backgroundColor" @change="setBgc(note.id)" type="color" hidden/>
+        <input ref="colorInput" v-model="backgroundColor" @input="setBgc(note.id)" type="color" hidden/>
         <button @click="inputColor" class="btn note-bgc-btn "title="Background color">
             <i class="fas fa-palette palette"></i>
         </button>
@@ -44,7 +42,8 @@ export default {
             this.note.backgroundColor = this.$refs.colorInput.click()            
         },
         setBgc(noteId){
-            noteService.setBgc(noteId, this.backgroundColor)
+            noteService.setBgc(noteId, this.backgroundColor);
+            this.$emit('bgc' , this.backgroundColor)
         }
     },
 }

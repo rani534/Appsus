@@ -12,7 +12,7 @@ export default {
   template: `
           <li :style="{'background-color': backgroundColor}" v-if="currComponent ,backgroundColor" class="note-preview column-layout ">
             <component :note="note" :is="currComponent"></component> 
-            <note-edit :note="note"></note-edit>
+            <note-edit @bgc="setColor" :note="note"></note-edit>
          </li>  
       `,
   data() {
@@ -24,6 +24,11 @@ export default {
   created() {
     this.currComponent = this.note.type
     this.backgroundColor = this.note.style.backgroundColor
+  },
+  methods:{
+    setColor(bgc){
+     this.backgroundColor = bgc
+    }
   },
   components: {
     noteTxt,

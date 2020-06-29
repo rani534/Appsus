@@ -105,15 +105,19 @@
     }
     .email-app .email-nav-bar {
         display: none;
-       transform: translateX(100%);
-       background-color:  #fce9c4;
-       transform: translateX(0);
-       box-shadow: -6px 0px 14px rgba(0, 0, 0, 0.2);
-       height: 100%;
-       top: 0;
-       width: 37%;
-       opacity: 0.75;
-      z-index: 2;
+    }
+    nav.altrenative-email-nav-bar {
+        height: 100%;
+        width: 50vw;
+        transform: translateX(100%);
+        background-color: #fce9c4;
+        transform: translateX(0);
+        box-shadow: -6px 0px 14px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        top: 0;
+        width: 37%;
+        opacity: 0.75;
+        z-index: 2;
     }
     .hamburger-btn {
         display: block;
@@ -121,20 +125,19 @@
     .email-app h1.email-logo {
         top: 84px;
     }
-    .email-nav-bar {
-        height: 100%;
-        width: 50vw;
-    }
-    .email-nav-bar > *{
+    /* .alternative-email-nav-bar {
+       
+    } */
+    .alternative-email-nav-bar>* {
         font-size: 25px;
     }
-    .compose-btn{
+    .compose-btn {
         width: 155px;
         height: 50px;
         border-radius: 9999px;
         font-size: 25px
     }
-    .star-btn{
+    .star-btn {
         margin-top: 50px;
         margin-bottom: -10px;
     }

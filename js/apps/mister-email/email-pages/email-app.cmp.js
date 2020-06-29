@@ -14,8 +14,17 @@ export default {
     <email-filter></email-filter>
     <div class="app-container flex">
     <h1 class="email-logo">Susmail</h1>
-       <nav ref="nav" class="email-nav-bar column-layout">
+       <nav class="email-nav-bar column-layout">
        <button class="compose-btn" @click="addEmail">Compose +</button>
+       <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
+       <p class="star-btn">Starred
+       <i class="far fa-star"></i>
+       </p>
+       <p>Sent Mail</p>
+       <p>Drafts</p>
+       </nav> 
+       <nav ref="nav" class="alternative-email-nav-bar column-layout">
+       <button class="compose-btn" @click.stop="addEmail">Compose +</button>
        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
        <p class="star-btn">Starred
        <i class="far fa-star"></i>
@@ -77,9 +86,11 @@ export default {
       this.filterBy = filterBy;
     },
     addEmail() {
-      // document.body.classList.toggle('menu-open');
       this.selectedEmail = true;
       this.isAddingEmail = true;
+      this.$refs.nav.style.display = 'none';
+      
+      document.body.classList.remove('menu-open');
     },
     backToList() {
       this.selectedEmail = false;

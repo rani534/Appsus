@@ -12,7 +12,7 @@
     z-index: 1;
 }
 
-.menu-open .email-nav-bar {
+.menu-open .alternative-email-nav-bar {
     transform: translateX(0);
     box-shadow: -6px 0px 14px rgba(0, 0, 0, 0.2);
 }
@@ -30,6 +30,18 @@
 }
 
 .email-nav-bar>*:hover {
+    cursor: pointer;
+}
+
+.alternative-email-nav-bar {
+    display: none;
+    position: fixed;
+    padding-inline-start: 20px;
+    padding-top: 11px;
+    left: 9px;
+}
+
+.alternative-email-nav-bar>*:hover {
     cursor: pointer;
 }
 

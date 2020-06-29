@@ -106,7 +106,7 @@
     .email-app .email-nav-bar {
         display: none;
     }
-    nav.altrenative-email-nav-bar {
+    #alternative-nav {
         height: 100%;
         width: 50vw;
         transform: translateX(100%);

@@ -23,7 +23,7 @@ export default {
        <p>Sent Mail</p>
        <p>Drafts</p>
        </nav> 
-       <nav ref="nav" class="alternative-email-nav-bar column-layout">
+       <nav ref="nav" id="alternative-nav" class="alternative-email-nav-bar column-layout">
        <button class="compose-btn" @click.stop="addEmail">Compose +</button>
        <div class="inbox-container"><p class="p-inbox">Inbox</p><email-status :emails="emails"></email-status></div>
        <p class="star-btn">Starred
